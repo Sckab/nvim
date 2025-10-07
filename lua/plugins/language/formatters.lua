@@ -2,7 +2,9 @@ return {
 	"stevearc/conform.nvim",
 	opts = {},
 	config = function()
-		require("conform").setup({
+		local conform = require("conform")
+
+		conform.setup({
 			format_on_save = {
 				timeout_ms = 500,
 				lsp_format = "fallback",
@@ -42,6 +44,24 @@ return {
 					indent_size = 4,
 				},
 			},
+		})
+
+		local function format()
+			conform.format({ async = true, lsp_format = "fallback" })
+		end
+
+		vim.api.nvim_create_autocmd("BufWritePre", {
+			callback = format,
+			desc = "Format before save",
+		})
+
+		vim.api.nvim_create_autocmd("TextChanged", {
+			callback = function()
+				if vim.v.event and vim.v.event.operator == "put" then
+					format()
+				end
+			end,
+			desc = "Format on paste",
 		})
 	end,
 }
