@@ -19,6 +19,7 @@ return {
 				astro = { "prettierd" },
 				bash = { "shfmt" },
 				csharp = { "csharpier" },
+				go = { "goimports" },
 			},
 			formatter_bin_paths = { vim.fn.stdpath("data") .. "/mason/bin" },
 			formatters_opts = {

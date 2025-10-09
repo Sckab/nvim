@@ -21,6 +21,7 @@ return {
 				"lemminx",
 				"marksman",
 				"pyright",
+				"gopls",
 			},
 		})
 	end,
