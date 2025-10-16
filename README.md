@@ -19,3 +19,9 @@ Those are the language supported:
 - Yaml
 - Markdown
 - Python
+- Go
+
+## Preview image
+
+![dashboard](./.github/assets/preview-2.png)
+![general image](./.github/assets/preview-1.png)
