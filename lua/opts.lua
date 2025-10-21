@@ -3,6 +3,7 @@ vim.opt.clipboard = "unnamedplus"
 vim.g.mapleader = " "
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -16,12 +17,12 @@ vim.opt.spell = true
 vim.opt.spelllang = "en_us,it"
 
 vim.opt.listchars = {
-    eol = "⬎",
-    tab = "  ",
-    trail = "·",
-    extends = "",
-    precedes = "",
-    nbsp = " ",
+	eol = "⬎",
+	tab = "  ",
+	trail = "·",
+	extends = "",
+	precedes = "",
+	nbsp = " ",
 }
 
 vim.opt.wrap = false
@@ -33,7 +34,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
 
-vim.g.deprecation_warnings = false
+vim.g.deprecation_warnings = true
 
 vim.opt.confirm = true
 
@@ -46,3 +47,10 @@ vim.opt.foldcolumn = "1"
 vim.opt.cursorline = true
 vim.opt.scrolloff = 4
 vim.opt.sidescrolloff = 8
+
+vim.opt.virtualedit = "block"
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
