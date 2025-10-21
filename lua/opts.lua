@@ -12,13 +12,16 @@ vim.opt.smartindent = true
 
 vim.opt.list = true
 
+vim.opt.spell = true
+vim.opt.spelllang = "en_us,it"
+
 vim.opt.listchars = {
-	eol = "⬎",
-	tab = "  ",
-	trail = "·",
-	extends = "",
-	precedes = "",
-	nbsp = " ",
+    eol = "⬎",
+    tab = "  ",
+    trail = "·",
+    extends = "",
+    precedes = "",
+    nbsp = " ",
 }
 
 vim.opt.wrap = false
