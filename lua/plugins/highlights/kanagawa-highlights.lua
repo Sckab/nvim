@@ -61,6 +61,8 @@ return {
 	NeoTreeIndentMarker = { fg = "#2a2a2a" },
 	NeoTreeExpander = { fg = "#2a2a2a" },
 	NeoTreeCursorLine = { bg = "#2a2a2a" },
+	NeoTreeTabInactive = { bg = "#181616", fg = "#2a2a2a" },
+	NeoTreeTabActive = { bg = "#181616", fg = "#76946A" },
 	ColorColumn = { bg = "#2a2a2a" },
 	VirtColumn = { fg = "#2a2a2a" },
 	SnacksDashboardTitle = { fg = "#C34043", bold = true },

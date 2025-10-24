@@ -8,10 +8,13 @@ return {
 	cmd = { "Neotree" },
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		"nvim-tree/nvim-web-devicons",
+		"nvim-mini/mini.icons",
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
+		require("mini.icons").setup()
+		MiniIcons.mock_nvim_web_devicons()
+
 		require("neo-tree").setup({
 			close_if_last_window = true,
 			popup_border_style = "rounded",
@@ -28,13 +31,6 @@ return {
 					expander_expanded = "",
 					expander_highlight = "NeoTreeExpander",
 					last_indent_marker = "│",
-				},
-
-				icon = {
-					folder_closed = "",
-					folder_open = "",
-					folder_empty = "",
-					default = "",
 				},
 
 				name = {
@@ -56,6 +52,7 @@ return {
 					},
 				},
 			},
+
 			filesystem = {
 				filtered_items = {
 					visible = true,
@@ -74,11 +71,45 @@ return {
 					current = "window",
 				},
 			},
+
+			source_selector = {
+				winbar = true,
+				statusline = true,
+				show_scrolled_off_parent_node = false,
+				sources = {
+					{
+						source = "filesystem",
+						display_name = "󰉓 Files",
+					},
+					{
+						source = "buffers",
+						display_name = "󰈚 Buffers",
+					},
+					{
+						source = "git_status",
+						display_name = "󰊢 Git",
+					},
+				},
+				content_layout = "center",
+				tabs_layout = "center",
+				truncation_character = "…",
+				tabs_min_width = nil,
+				tabs_max_width = nil,
+				padding = 0,
+				separator = { left = "▏", right = "▕" },
+				separator_active = nil,
+				show_separator_on_edge = false,
+				highlight_tab = "NeoTreeTabInactive",
+				highlight_tab_active = "NeoTreeTabActive",
+				highlight_background = "NeoTreeTabInactive",
+				highlight_separator = "NeoTreeTabSeparatorInactive",
+				highlight_separator_active = "NeoTreeTabSeparatorActive",
+			},
+
 			window = {
 				position = "left",
-				width = 30,
+				width = 31,
 				mappings = {
-					["o"] = "open",
 					["<CR>"] = "open",
 					["l"] = "open",
 					["h"] = "close_node",
@@ -92,6 +123,7 @@ return {
 					["q"] = "close_window",
 				},
 			},
+
 			event_handlers = {
 				{
 					event = "neo_tree_buffer_enter",
