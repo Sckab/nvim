@@ -29,16 +29,19 @@ return {
 					expander_highlight = "NeoTreeExpander",
 					last_indent_marker = "│",
 				},
+
 				icon = {
 					folder_closed = "",
 					folder_open = "",
 					folder_empty = "",
 					default = "",
 				},
+
 				name = {
 					trailing_slash = false,
 					use_git_status_colors = false,
 				},
+
 				git_status = {
 					symbols = {
 						added = "󰐕",
@@ -59,11 +62,13 @@ return {
 					hide_dotfiles = false,
 					hide_gitignored = false,
 				},
+
 				follow_current_file = { enabled = true },
 				use_libuv_file_watcher = true,
 				hijack_netrw_behavior = "open_default",
-				group_empty_dirs = true,
+				group_empty_dirs = false,
 				bind_to_cwd = false,
+
 				cwd_target = {
 					sidebar = "window",
 					current = "window",

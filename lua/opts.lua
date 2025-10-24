@@ -1,6 +1,8 @@
+vim.g.mapleader = " "
+vim.g.deprecation_warnings = true
+
 vim.opt.clipboard = "unnamedplus"
 
-vim.g.mapleader = " "
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.signcolumn = "yes"
@@ -19,7 +21,7 @@ vim.opt.spelllang = "en_us,it"
 vim.opt.listchars = {
 	eol = "⬎",
 	tab = "  ",
-	trail = "·",
+	trail = " ",
 	extends = "",
 	precedes = "",
 	nbsp = " ",
@@ -33,8 +35,6 @@ vim.opt.incsearch = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undofile = true
-
-vim.g.deprecation_warnings = true
 
 vim.opt.confirm = true
 
