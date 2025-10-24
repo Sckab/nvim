@@ -71,10 +71,4 @@ return {
 	SnacksDashboardFooter = { fg = "#625e5a" },
 	FoldColumn = { bg = "#181616", fg = "#2a2a2a" },
 	IblIndent = { fg = "#2a2a2a" },
-	MiniStatuslineDevinfo = { bg = "#181616", fg = "#76946A" },
-	MiniStatuslineFileinfo = { bg = "#181616", fg = "#76946A" },
-	MiniStatuslineFilename = { bg = "#181616", fg = "#76946A" },
-	MiniStatuslineInactive = { bg = "#181616", fg = "#76946A" },
-	StatusLine = { bg = "#181616", fg = "#181616" },
-	StatusLineNC = { bg = "#181616", fg = "#181616" },
 }
