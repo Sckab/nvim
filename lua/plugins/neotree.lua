@@ -22,6 +22,7 @@ return {
 			enable_diagnostics = false,
 			refresh_diagnostics_on_change = true,
 			sort_case_insensitive = false,
+
 			default_component_configs = {
 				indent = {
 					with_markers = true,

@@ -4,16 +4,15 @@ return {
 	keys = {
 		{ "<F7>", desc = "🔧 VSCode-style Terminal" },
 	},
+
 	config = function()
 		local betterTerm = require("betterTerm")
 
-		betterTerm.setup({
-			prefix = "BetterTerm_",
+		require("betterTerm").setup({
+			prefix = "Terminal",
 			startInsert = true,
 			position = "bot",
 			size = 15,
-			border = "single",
-			winhl = "Normal:TerminalNormal,FloatBorder:TerminalBorder",
 
 			open_in_current_file_dir = true,
 			remember_mode = true,
@@ -22,15 +21,11 @@ return {
 
 		vim.keymap.set("n", "<F7>", function()
 			betterTerm.open()
-		end, { desc = "🔧 VSCode-style Terminal" })
-
-		vim.keymap.set("t", "<F7>", function()
-			betterTerm.open()
 		end, { desc = "Toggle Terminal" })
 
 		vim.keymap.set("t", "<C-t>", function()
 			local next_index = 1
-			while vim.fn.bufexists("BetterTerm_" .. next_index) == 1 do
+			while vim.fn.bufexists("Terminal" .. next_index) == 1 do
 				next_index = next_index + 1
 			end
 			betterTerm.open(next_index)
@@ -39,18 +34,6 @@ return {
 		vim.keymap.set("t", "<C-w>", function()
 			vim.cmd("bd!")
 		end, { desc = "Close Terminal Tab" })
-
-		vim.keymap.set("t", "<C-Tab>", function()
-			betterTerm.select()
-		end, { desc = "Select Terminal" })
-
-		for i = 1, 5 do
-			vim.keymap.set("t", "<C-" .. i .. ">", function()
-				betterTerm.open(i)
-			end, { desc = "Terminal " .. i })
-		end
-
-		vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit Terminal Insert Mode" })
 
 		vim.keymap.set("t", "<C-h>", "<cmd>wincmd h<cr>", { desc = "Move to left window" })
 		vim.keymap.set("t", "<C-j>", "<cmd>wincmd j<cr>", { desc = "Move to below window" })
