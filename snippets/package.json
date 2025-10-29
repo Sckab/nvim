@@ -1,0 +1,29 @@
+{
+  "name": "comment",
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "python",
+          "bash"
+        ],
+        "path": "./hash-comments.json"
+      },
+      {
+        "language": "lua",
+        "path": "./dash-comments.json"
+      },
+      {
+        "language": [
+          "typescript",
+          "javascript",
+          "cpp",
+          "cs",
+          "go",
+          "c"
+        ],
+        "path": "./slash-comments.json"
+      }
+    ]
+  }
+}

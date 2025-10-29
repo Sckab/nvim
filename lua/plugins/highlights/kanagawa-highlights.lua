@@ -73,4 +73,6 @@ return {
 	SnacksDashboardFooter = { fg = "#625e5a" },
 	FoldColumn = { bg = "#181616", fg = "#2a2a2a" },
 	IblIndent = { fg = "#2a2a2a" },
+	DropBarMenuHoverEntry = { bg = "#2a2a2a" },
+	DropBarIconUISeparator = { fg = "#2a2a2a" },
 }

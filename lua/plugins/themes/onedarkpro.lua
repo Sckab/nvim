@@ -15,7 +15,7 @@ return {
 			toggle_style_list = { "dark", "darker", "cool", "deep", "warm", "warmer", "light" },
 
 			code_style = {
-				comments = "none",
+				comments = "italic",
 				keywords = "none",
 				functions = "none",
 				strings = "none",

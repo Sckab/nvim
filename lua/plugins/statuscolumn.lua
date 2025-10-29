@@ -26,7 +26,7 @@ return {
 					hl = "FoldColumn",
 				},
 				{
-					text = { " " },
+					text = { "  " },
 					condition = { true },
 					hl = "StatusColumnSeparator",
 				},

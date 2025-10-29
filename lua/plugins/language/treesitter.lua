@@ -23,6 +23,7 @@ return {
 					"gomod",
 					"gosum",
 					"gowork",
+					"regex",
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
