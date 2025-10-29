@@ -49,6 +49,26 @@ return {
 				documentation = {
 					auto_show = true,
 				},
+
+				list = {
+					selection = {
+						preselect = function(ctx)
+							return ctx.mode ~= "cmdline" and not require("blink.cmp").snippet_active({ direction = 1 })
+						end,
+						auto_insert = function(ctx)
+							return ctx.mode == "cmdline"
+						end,
+					},
+				},
+				trigger = {
+					prefetch_on_insert = true,
+				},
+
+				accept = {
+					auto_brackets = {
+						enabled = true,
+					},
+				},
 			},
 
 			sources = {
@@ -57,6 +77,7 @@ return {
 
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
+
 		opts_extend = { "sources.default" },
 	},
 }
