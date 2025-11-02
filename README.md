@@ -1,6 +1,6 @@
 # NVIM CONFIG
 
-This is my personal nvim config, it uses the leggendary one dark pro theme.
+This is my personal nvim config, it uses the leggendary one dark pro theme + kanagawa.
 It has auto completition, auto-formatting, and a bunch of other cool things!
 
 Those are the language supported:
