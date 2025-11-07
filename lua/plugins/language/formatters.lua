@@ -20,6 +20,8 @@ return {
 				bash = { "shfmt" },
 				csharp = { "csharpier" },
 				go = { "goimports" },
+				cpp = { "clang-format" },
+				c = { "clang-format" },
 			},
 			formatter_bin_paths = { vim.fn.stdpath("data") .. "/mason/bin" },
 			formatters_opts = {

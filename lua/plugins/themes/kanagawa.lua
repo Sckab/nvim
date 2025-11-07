@@ -6,7 +6,7 @@ return {
 
 		require("kanagawa").setup({
 			compile = false,
-			undercurl = false,
+			undercurl = true,
 			commentStyle = { italic = true },
 			functionStyle = { italic = false },
 			keywordStyle = { italic = false },

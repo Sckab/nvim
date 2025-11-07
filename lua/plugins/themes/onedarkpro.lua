@@ -26,7 +26,7 @@ return {
 
 			diagnostics = {
 				darker = true,
-				undercurl = false,
+				undercurl = true,
 				background = true,
 			},
 		})

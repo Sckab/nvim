@@ -24,6 +24,7 @@ return {
 					"gosum",
 					"gowork",
 					"regex",
+					"cpp",
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
