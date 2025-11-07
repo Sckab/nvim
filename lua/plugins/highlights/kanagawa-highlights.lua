@@ -2,6 +2,8 @@ return {
 	NormalLineNr = { bg = "#181616" },
 	LineNr = { bg = "#181616", fg = "#2a2a2a" },
 	CursorLineNr = { bg = "#181616", fg = "#FF9E3B", bold = true },
+	CursorLine = { bg = "#2A2A2A" },
+	Folded = { bg = "#2A2A2A" },
 	SignColumn = { bg = "#181616" },
 	GitSignsAdd = { bg = "#181616", fg = "#98BB6C" },
 	GitSignsChange = { bg = "#181616", fg = "#E6C384" },

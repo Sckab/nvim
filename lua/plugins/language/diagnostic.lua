@@ -3,6 +3,7 @@ return {
 	config = function()
 		vim.diagnostic.config({
 			virtual_text = true,
+
 			signs = {
 				text = {
 					[vim.diagnostic.severity.ERROR] = "",
@@ -11,9 +12,11 @@ return {
 					[vim.diagnostic.severity.INFO] = "",
 				},
 			},
+
 			update_in_insert = true,
 			severity_sort = true,
 			underline = true,
+
 			float = {
 				show_header = true,
 				source = "always",
