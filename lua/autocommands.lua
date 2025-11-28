@@ -36,7 +36,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		set_indent(2, true)
 	end,
-	desc = "2 spazi per linguaggi web/YAML",
+	desc = "2 spaces for web languages and YAML",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -45,7 +45,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		set_indent(4, true)
 	end,
-	desc = "4 spazi per Python",
+	desc = "4 spaces for python",
 })
 
 vim.api.nvim_create_autocmd("FileType", {
@@ -54,5 +54,11 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		set_indent(4, false)
 	end,
-	desc = "TAB reali per Makefile",
+	desc = "TABS for makefiles",
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+	callback = function()
+		vim.cmd([[%s/\s\+$//e]])
+	end,
 })
