@@ -25,6 +25,7 @@ return {
 					"gowork",
 					"regex",
 					"cpp",
+					"cmake",
 				},
 				highlight = { enable = true },
 				indent = { enable = true },

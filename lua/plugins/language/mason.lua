@@ -36,6 +36,7 @@ return {
 					"pyright",
 					"gopls",
 					"clangd",
+					"cmake",
 				},
 			})
 
@@ -54,6 +55,7 @@ return {
 				"pyright",
 				"gopls",
 				"clangd",
+				"cmake",
 			}
 
 			vim.lsp.config("lua_ls", {

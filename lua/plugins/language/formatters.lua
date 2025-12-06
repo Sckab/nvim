@@ -16,7 +16,7 @@ return {
 				typescript = { "prettierd" },
 				css = { "prettierd" },
 				html = { "prettierd" },
-				astro = { "prettierd" },
+				astro = { "prettier" },
 				bash = { "shfmt" },
 				csharp = { "csharpier" },
 				go = { "goimports" },

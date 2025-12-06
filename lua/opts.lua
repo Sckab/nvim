@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.g.deprecation_warnings = true
+vim.g.editorconfig = true
 
 vim.opt.clipboard = "unnamedplus"
 
