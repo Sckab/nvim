@@ -13,7 +13,6 @@ return {
 					"clang-format",
 					"csharpier",
 					"goimports",
-					"prettierd",
 					"shfmt",
 					"stylua",
 					"taplo",
@@ -37,6 +36,7 @@ return {
 					"gopls",
 					"clangd",
 					"cmake",
+					"biome",
 				},
 			})
 
@@ -81,6 +81,8 @@ return {
 					end,
 				})
 			end
+
+			vim.lsp.enable("biome")
 		end,
 	},
 }
