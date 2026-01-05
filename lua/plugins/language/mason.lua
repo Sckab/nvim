@@ -37,6 +37,7 @@ return {
 					"clangd",
 					"cmake",
 					"biome",
+					"angularls",
 				},
 			})
 
@@ -56,6 +57,7 @@ return {
 				"gopls",
 				"clangd",
 				"cmake",
+				"angularls",
 			}
 
 			vim.lsp.config("lua_ls", {
