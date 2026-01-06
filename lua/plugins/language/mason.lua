@@ -55,6 +55,7 @@ return {
 				"gopls",
 				"clangd",
 				"cmake",
+				"html",
 			}
 
 			vim.lsp.config("lua_ls", {
@@ -71,32 +72,6 @@ return {
 				on_attach = function(client, bufnr)
 					navic.attach(client, bufnr)
 				end,
-			})
-
-			vim.lsp.config("html", {
-				filetypes = { "html", "htmlangular" },
-
-				on_attach = function(client, bufnr)
-					navic.attach(client, bufnr)
-				end,
-			})
-
-			vim.lsp.config("biome", {
-				filetypes = {
-					"astro",
-					"css",
-					"graphql",
-					"html",
-					"javascript",
-					"javascriptreact",
-					"json",
-					"jsonc",
-					"svelte",
-					"typescript",
-					"typescriptreact",
-					"vue",
-					"htmlangular",
-				},
 			})
 
 			for _, lsp in ipairs(lsps) do
