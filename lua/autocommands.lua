@@ -65,7 +65,14 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 vim.api.nvim_create_autocmd("BufWritePre", {
 	callback = function()
-		vim.cmd([[TailwindSort]])
+		local clients = vim.lsp.get_active_clients({ bufnr = 0 })
+
+		for _, client in ipairs(clients) do
+			if client.name == "tailwindcss" then
+				vim.cmd([[TailwindSort]])
+				return
+			end
+		end
 	end,
 })
 
