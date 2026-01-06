@@ -27,6 +27,7 @@ return {
 					"cpp",
 					"cmake",
 					"tsx",
+					"angular",
 				},
 				highlight = { enable = true },
 				indent = { enable = true },

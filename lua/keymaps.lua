@@ -3,6 +3,31 @@ vim.keymap.set("i", "<C-j>", "<Down>", { desc = "Move down in insert mode", nore
 vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move up in insert mode", noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move right in insert mode", noremap = true, silent = true })
 
+vim.keymap.set(
+	"t",
+	"<C-h>",
+	[[<Cmd>wincmd h<CR>]],
+	{ desc = "Move in the left window in the terminal", noremap = true, silent = true }
+)
+vim.keymap.set(
+	"t",
+	"<C-j>",
+	[[<Cmd>wincmd j<CR>]],
+	{ desc = "Move in the bottom window in the terminal", noremap = true, silent = true }
+)
+vim.keymap.set(
+	"t",
+	"<C-k>",
+	[[<Cmd>wincmd k<CR>]],
+	{ desc = "Move in the upper window in the terminal", noremap = true, silent = true }
+)
+vim.keymap.set(
+	"t",
+	"<C-l>",
+	[[<Cmd>wincmd l<CR>]],
+	{ desc = "Move in the right window in the terminal", noremap = true, silent = true }
+)
+
 vim.keymap.set("n", "<leader>bc", ":bp | bd #<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<CR>", { noremap = true, silent = true })
 

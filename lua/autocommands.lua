@@ -68,3 +68,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.cmd([[TailwindSort]])
 	end,
 })
+
+vim.api.nvim_create_autocmd("TermOpen", {
+	pattern = "term://*toggleterm#*",
+	callback = function()
+		vim.opt_local.spell = false
+	end,
+})

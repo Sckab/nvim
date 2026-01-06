@@ -78,4 +78,6 @@ return {
 	DropBarMenuHoverEntry = { bg = "#2a2a2a" },
 	DropBarIconUISeparator = { fg = "#2a2a2a" },
 	ColorfulWinSep = { fg = "#C34043" },
+	ToggleTerm1Normal = { bg = "#181616" },
+	ToggleTerm1EndOfBuffer = { bg = "#181616" },
 }
