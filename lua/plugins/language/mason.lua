@@ -43,7 +43,6 @@ return {
 
 			local lsps = {
 				"astro",
-				"html",
 				"cssls",
 				"ts_ls",
 				"csharp_ls",
@@ -74,6 +73,32 @@ return {
 				end,
 			})
 
+			vim.lsp.config("html", {
+				filetypes = { "html", "htmlangular" },
+
+				on_attach = function(client, bufnr)
+					navic.attach(client, bufnr)
+				end,
+			})
+
+			vim.lsp.config("biome", {
+				filetypes = {
+					"astro",
+					"css",
+					"graphql",
+					"html",
+					"javascript",
+					"javascriptreact",
+					"json",
+					"jsonc",
+					"svelte",
+					"typescript",
+					"typescriptreact",
+					"vue",
+					"htmlangular",
+				},
+			})
+
 			for _, lsp in ipairs(lsps) do
 				vim.lsp.config(lsp, {
 					on_attach = function(client, bufnr)
@@ -83,6 +108,7 @@ return {
 			end
 
 			vim.lsp.enable("biome")
+			vim.lsp.enable("html")
 		end,
 	},
 }
