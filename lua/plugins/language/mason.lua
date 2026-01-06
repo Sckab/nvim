@@ -46,7 +46,6 @@ return {
 				"html",
 				"cssls",
 				"ts_ls",
-				"tailwindcss",
 				"csharp_ls",
 				"bashls",
 				"taplo",
@@ -57,7 +56,6 @@ return {
 				"gopls",
 				"clangd",
 				"cmake",
-				"angularls",
 			}
 
 			vim.lsp.config("lua_ls", {
