@@ -16,6 +16,7 @@ return {
 		"markdown",
 		"astro",
 		"cshtml",
+		"htmlangular",
 	},
 	dependencies = "nvim-treesitter/nvim-treesitter",
 	config = function()
@@ -39,6 +40,7 @@ return {
 				"handlebars",
 				"hbs",
 				"cshtml",
+				"htmlangular",
 			},
 			skip_tags = {
 				"area",

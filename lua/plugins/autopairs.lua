@@ -6,7 +6,6 @@ return {
 		npairs.setup({})
 
 		local Rule = require("nvim-autopairs.rule")
-		local cond = require("nvim-autopairs.conds")
 
 		npairs.add_rules({
 			Rule(" ", " "):with_pair(function(opts)

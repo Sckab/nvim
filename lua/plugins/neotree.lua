@@ -23,6 +23,25 @@ return {
 			refresh_diagnostics_on_change = true,
 			sort_case_insensitive = false,
 
+			nesting_rules = {
+				["package.json"] = {
+					pattern = "^package%.json$",
+					files = { "package-lock.json", "yarn*" },
+				},
+				["tsconfig.json"] = {
+					pattern = "^tsconfig%.json$",
+					files = { "tsconfig.app.json", "tsconfig.spec.json" },
+				},
+				["app.ts"] = {
+					pattern = "^app%.ts$",
+					files = { "app.spec.ts", "app.routes.ts", "app.config.ts" },
+				},
+				["ts-extend"] = {
+					pattern = "(.+)%.ts$",
+					files = { "%1.spec.ts" },
+				},
+			},
+
 			default_component_configs = {
 				indent = {
 					with_markers = true,
@@ -116,7 +135,7 @@ return {
 					["h"] = "close_node",
 					["v"] = "open_vsplit",
 					["s"] = "open_split",
-					["t"] = "open_tabnew",
+					["t"] = "toggle_node",
 					["a"] = "add",
 					["d"] = "delete",
 					["r"] = "rename",

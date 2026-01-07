@@ -1,1 +1,34 @@
 require("launch")
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = {
+		"lua",
+		"astro",
+		"html",
+		"css",
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact",
+		"bash",
+		"c_sharp",
+		"toml",
+		"json",
+		"xml",
+		"yaml",
+		"markdown",
+		"python",
+		"go",
+		"cpp",
+		"cmake",
+		"htmlangular",
+		"gitignore",
+	},
+
+	callback = function()
+		vim.treesitter.start()
+
+		vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+		vim.wo[0][0].foldmethod = "expr"
+	end,
+})
