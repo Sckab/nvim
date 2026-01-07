@@ -5,7 +5,7 @@ return {
 		{
 			"<leader>tt",
 			function()
-				vim.cmd([[ToggleTerm size=17 direction=horizontal]])
+				vim.cmd([[ToggleTerm size=20 direction=horizontal]])
 			end,
 			mode = { "n" },
 			desc = "Toggle Terminal",
