@@ -52,14 +52,15 @@ return {
 		config = function()
 			local rainbow_delimiters = require("rainbow-delimiters")
 
-			vim.g.rainbow_delimiters = {
-				strategy = {
-					[""] = rainbow_delimiters.strategy["global"],
-					vim = rainbow_delimiters.strategy["local"],
-				},
+			require("rainbow-delimiters.setup").setup({
 				query = {
 					[""] = "rainbow-delimiters",
 					lua = "rainbow-blocks",
+					htmlangular = "rainbow-delimiters-html",
+				},
+				strategy = {
+					[""] = rainbow_delimiters.strategy["global"],
+					vim = rainbow_delimiters.strategy["local"],
 				},
 				highlight = {
 					"RainbowDelimiterRed",
@@ -70,7 +71,7 @@ return {
 					"RainbowDelimiterViolet",
 					"RainbowDelimiterCyan",
 				},
-			}
+			})
 
 			vim.api.nvim_set_hl(0, "RainbowDelimiterRed", { fg = "#E06C75" })
 			vim.api.nvim_set_hl(0, "RainbowDelimiterYellow", { fg = "#E5C07B" })
