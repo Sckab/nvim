@@ -27,6 +27,12 @@ vim.keymap.set(
 	[[<Cmd>wincmd l<CR>]],
 	{ desc = "Move in the right window in the terminal", noremap = true, silent = true }
 )
+vim.keymap.set(
+	"t",
+	"<Esc><Esc>",
+	[[<C-\><C-n>]],
+	{ desc = "Put in normal mode the user in terminal mode", noremap = true, silent = true }
+)
 
 vim.keymap.set("n", "<leader>bc", ":bp | bd #<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<CR>", { noremap = true, silent = true })
