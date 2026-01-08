@@ -25,9 +25,9 @@ NVIM_APPNAME=Sckab/nvim/ nvim
 
 ### bars-and-lines
 
++ [lukas-reineke/virt-column.nvim](https://dotfyle.com/plugins/lukas-reineke/virt-column.nvim)
 + [luukvbaal/statuscol.nvim](https://dotfyle.com/plugins/luukvbaal/statuscol.nvim)
 + [SmiteshP/nvim-navic](https://dotfyle.com/plugins/SmiteshP/nvim-navic)
-+ [lukas-reineke/virt-column.nvim](https://dotfyle.com/plugins/lukas-reineke/virt-column.nvim)
 ### color
 
 + [brenoprata10/nvim-highlight-colors](https://dotfyle.com/plugins/brenoprata10/nvim-highlight-colors)
@@ -36,22 +36,23 @@ NVIM_APPNAME=Sckab/nvim/ nvim
 + [rebelot/kanagawa.nvim](https://dotfyle.com/plugins/rebelot/kanagawa.nvim)
 ### comment
 
-+ [echasnovski/mini.comment](https://dotfyle.com/plugins/echasnovski/mini.comment)
 + [folke/todo-comments.nvim](https://dotfyle.com/plugins/folke/todo-comments.nvim)
++ [echasnovski/mini.comment](https://dotfyle.com/plugins/echasnovski/mini.comment)
 ### completion
 
 + [saghen/blink.cmp](https://dotfyle.com/plugins/saghen/blink.cmp)
 ### editing-support
 
-+ [Wansmer/treesj](https://dotfyle.com/plugins/Wansmer/treesj)
-+ [monaqa/dial.nvim](https://dotfyle.com/plugins/monaqa/dial.nvim)
-+ [gbprod/yanky.nvim](https://dotfyle.com/plugins/gbprod/yanky.nvim)
-+ [folke/snacks.nvim](https://dotfyle.com/plugins/folke/snacks.nvim)
-+ [bennypowers/nvim-regexplainer](https://dotfyle.com/plugins/bennypowers/nvim-regexplainer)
-+ [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
 + [windwp/nvim-ts-autotag](https://dotfyle.com/plugins/windwp/nvim-ts-autotag)
++ [folke/snacks.nvim](https://dotfyle.com/plugins/folke/snacks.nvim)
 + [nacro90/numb.nvim](https://dotfyle.com/plugins/nacro90/numb.nvim)
++ [Wansmer/treesj](https://dotfyle.com/plugins/Wansmer/treesj)
 + [HiPhish/rainbow-delimiters.nvim](https://dotfyle.com/plugins/HiPhish/rainbow-delimiters.nvim)
++ [windwp/nvim-autopairs](https://dotfyle.com/plugins/windwp/nvim-autopairs)
++ [bennypowers/nvim-regexplainer](https://dotfyle.com/plugins/bennypowers/nvim-regexplainer)
++ [monaqa/dial.nvim](https://dotfyle.com/plugins/monaqa/dial.nvim)
++ [RaafatTurki/hex.nvim](https://dotfyle.com/plugins/RaafatTurki/hex.nvim)
++ [gbprod/yanky.nvim](https://dotfyle.com/plugins/gbprod/yanky.nvim)
 ### file-explorer
 
 + [nvim-neo-tree/neo-tree.nvim](https://dotfyle.com/plugins/nvim-neo-tree/neo-tree.nvim)
@@ -77,11 +78,11 @@ NVIM_APPNAME=Sckab/nvim/ nvim
 ### lsp
 
 + [j-hui/fidget.nvim](https://dotfyle.com/plugins/j-hui/fidget.nvim)
-+ [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
 + [stevearc/aerial.nvim](https://dotfyle.com/plugins/stevearc/aerial.nvim)
-+ [smjonas/inc-rename.nvim](https://dotfyle.com/plugins/smjonas/inc-rename.nvim)
 + [kosayoda/nvim-lightbulb](https://dotfyle.com/plugins/kosayoda/nvim-lightbulb)
++ [smjonas/inc-rename.nvim](https://dotfyle.com/plugins/smjonas/inc-rename.nvim)
 + [rachartier/tiny-code-action.nvim](https://dotfyle.com/plugins/rachartier/tiny-code-action.nvim)
++ [neovim/nvim-lspconfig](https://dotfyle.com/plugins/neovim/nvim-lspconfig)
 ### lsp-installer
 
 + [williamboman/mason.nvim](https://dotfyle.com/plugins/williamboman/mason.nvim)
@@ -101,6 +102,7 @@ NVIM_APPNAME=Sckab/nvim/ nvim
 + [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)
 ### split-and-window
 
++ [nvim-zh/colorful-winsep.nvim](https://dotfyle.com/plugins/nvim-zh/colorful-winsep.nvim)
 + [mrjones2014/smart-splits.nvim](https://dotfyle.com/plugins/mrjones2014/smart-splits.nvim)
 ### statusline
 
@@ -108,19 +110,26 @@ NVIM_APPNAME=Sckab/nvim/ nvim
 ### syntax
 
 + [nvim-treesitter/nvim-treesitter](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter)
-+ [nvim-treesitter/nvim-treesitter-textobjects](https://dotfyle.com/plugins/nvim-treesitter/nvim-treesitter-textobjects)
 ### tabline
 
 + [akinsho/bufferline.nvim](https://dotfyle.com/plugins/akinsho/bufferline.nvim)
+### terminal-integration
+
++ [akinsho/toggleterm.nvim](https://dotfyle.com/plugins/akinsho/toggleterm.nvim)
 ### utility
 
 + [folke/noice.nvim](https://dotfyle.com/plugins/folke/noice.nvim)
 + [kevinhwang91/nvim-ufo](https://dotfyle.com/plugins/kevinhwang91/nvim-ufo)
+### web-development
+
++ [luckasRanarison/tailwind-tools.nvim](https://dotfyle.com/plugins/luckasRanarison/tailwind-tools.nvim)
 ## Language Servers
 
++ angularls
 + astro
 + bashls
 + clangd
++ cmake
 + csharp_ls
 + cssls
 + gopls
