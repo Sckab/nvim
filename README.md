@@ -102,7 +102,6 @@ NVIM_APPNAME=Sckab/nvim/ nvim
 + [L3MON4D3/LuaSnip](https://dotfyle.com/plugins/L3MON4D3/LuaSnip)
 ### split-and-window
 
-+ [nvim-zh/colorful-winsep.nvim](https://dotfyle.com/plugins/nvim-zh/colorful-winsep.nvim)
 + [mrjones2014/smart-splits.nvim](https://dotfyle.com/plugins/mrjones2014/smart-splits.nvim)
 ### statusline
 
@@ -139,7 +138,6 @@ NVIM_APPNAME=Sckab/nvim/ nvim
 + lua_ls
 + marksman
 + pyright
-+ svelte
 + tailwindcss
 + taplo
 
