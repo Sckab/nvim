@@ -7,7 +7,7 @@ return {
 			setopt = true,
 			relculnr = true,
 			relculright = false,
-			bt_ignore = { "neo-tree", "aerial", "trouble", "help", "toggleterm" },
+			bt_ignore = { "neo-tree", "aerial", "trouble", "help", "terminal" },
 			ft_ignore = { "neo-tree", "aerial", "trouble", "help", "dashboard", "toggleterm" },
 			segments = {
 				{
