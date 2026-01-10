@@ -52,7 +52,3 @@ vim.keymap.set("n", "<leader>bc", ":bp | bd #<CR>", { noremap = true, silent = t
 vim.keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>tct", ":TailwindConcealToggle<CR>", { noremap = true, silent = true })
-
-vim.keymap.set("n", "za", "za")
-vim.keymap.set("n", "zR", "zR")
-vim.keymap.set("n", "zM", "zM")
