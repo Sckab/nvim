@@ -36,14 +36,14 @@ vim.keymap.set(
 
 vim.keymap.set(
 	"n",
-	"<leader>mh",
+	"<leader>Mh",
 	"<Cmd>BufferLineMovePrev<CR>",
 	{ desc = "Move the current buffer to the left", noremap = false, silent = true }
 )
 
 vim.keymap.set(
 	"n",
-	"<leader>ml",
+	"<leader>Ml",
 	"<Cmd>BufferLineMoveNext<CR>",
 	{ desc = "Move the current buffer to the right", noremap = false, silent = true }
 )
