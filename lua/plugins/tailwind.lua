@@ -1,20 +1,8 @@
 return {
-	{
-		"luckasRanarison/tailwind-tools.nvim",
-		name = "tailwind-tools",
-		build = ":UpdateRemotePlugins",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"nvim-telescope/telescope.nvim", -- optional
-			"neovim/nvim-lspconfig", -- optional
-		},
-		opts = {
-			server = {
-				override = false,
-			},
-			document_color = {
-				enabled = false,
-			},
-		}, -- your configuration
-	},
+	"y3owk1n/tailwind-autosort.nvim",
+	version = "*",
+	event = "VeryLazy",
+	dependencies = { "nvim-treesitter/nvim-treesitter" },
+	---@type TailwindAutoSort.Config
+	opts = {},
 }
