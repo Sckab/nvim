@@ -36,14 +36,14 @@ vim.keymap.set(
 
 vim.keymap.set(
 	"n",
-	"<leader>Mh",
+	"<leader>mh",
 	"<Cmd>BufferLineMovePrev<CR>",
 	{ desc = "Move the current buffer to the left", noremap = false, silent = true }
 )
 
 vim.keymap.set(
 	"n",
-	"<leader>Ml",
+	"<leader>ml",
 	"<Cmd>BufferLineMoveNext<CR>",
 	{ desc = "Move the current buffer to the right", noremap = false, silent = true }
 )
@@ -51,4 +51,9 @@ vim.keymap.set(
 vim.keymap.set("n", "<leader>bc", ":bp | bd #<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>bo", ":BufferLineCloseOthers<CR>", { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>tct", ":TailwindConcealToggle<CR>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>k", "<cmd>Treewalker Up<cr>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>j", "<cmd>Treewalker Down<cr>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>h", "<cmd>Treewalker Left<cr>", { silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>l", "<cmd>Treewalker Right<cr>", { silent = true })
+
+vim.keymap.set("n", "<leader>M", require("treesj").toggle)
