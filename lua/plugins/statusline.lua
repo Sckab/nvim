@@ -71,6 +71,7 @@ return {
 				"aerial",
 				"lazy",
 				"mason",
+				"toggleterm",
 			},
 		})
 	end,
