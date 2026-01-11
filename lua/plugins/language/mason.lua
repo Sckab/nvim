@@ -38,6 +38,8 @@ return {
 					"cmake",
 					"biome",
 					"angularls",
+					"gh_actions_ls",
+					"gitlab_ci_ls",
 				},
 			})
 
