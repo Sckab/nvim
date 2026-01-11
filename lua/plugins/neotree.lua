@@ -21,6 +21,13 @@ return {
 		refresh_diagnostics_on_change = true,
 		sort_case_insensitive = false,
 
+		nesting_rules = {
+			["tsconfig.json"] = {
+				pattern = "^tsconfig%.json$",
+				files = { "tsconfig.app.json", "tsconfig.spec.json" },
+			},
+		},
+
 		default_component_configs = {
 			indent = {
 				with_markers = true,
