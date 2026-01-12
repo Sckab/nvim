@@ -87,3 +87,15 @@ vim.api.nvim_create_autocmd("TermOpen", {
 		vim.opt_local.signcolumn = "no"
 	end,
 })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+	callback = function(args)
+		vim.lsp.document_color.enable(false, args.buf)
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "FileType" }, {
+	callback = function()
+		vim.cmd("HighlightColors on")
+	end,
+})

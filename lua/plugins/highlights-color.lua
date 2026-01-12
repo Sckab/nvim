@@ -1,6 +1,6 @@
 return {
 	"brenoprata10/nvim-highlight-colors",
-	event = "VeryLazy",
+	lazy = false,
 	config = function()
 		require("nvim-highlight-colors").setup({
 			render = "virtual",
@@ -15,13 +15,6 @@ return {
 			enable_var_usage = true,
 			enable_named_colors = true,
 			enable_tailwind = true,
-
-			custom_colors = {
-				{ label = "%-%-theme%-primary%-color", color = "#0f1419" },
-				{ label = "%-%-theme%-secondary%-color", color = "#5a5a5a" },
-				{ label = "%-%-kanagawa%-bg", color = "#181616" },
-				{ label = "%-%-kanagawa%-fg", color = "#dcd7ba" },
-			},
 		})
 	end,
 }
