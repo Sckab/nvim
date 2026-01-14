@@ -10,8 +10,8 @@ vim.api.nvim_create_autocmd("FileType", {
 		"typescript",
 		"javascriptreact",
 		"typescriptreact",
-		"bash",
-		"c_sharp",
+		"sh",
+		"cs",
 		"toml",
 		"json",
 		"xml",
@@ -23,6 +23,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"cmake",
 		"htmlangular",
 		"gitignore",
+		"jsonc",
 	},
 
 	callback = function()
