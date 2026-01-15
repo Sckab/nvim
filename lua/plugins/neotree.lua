@@ -32,6 +32,12 @@ return {
 				last_indent_marker = "│",
 			},
 
+			icon = {
+				folder_closed = "",
+				folder_open = "",
+				folder_empty = "",
+			},
+
 			name = {
 				trailing_slash = false,
 				use_git_status_colors = false,
@@ -157,9 +163,6 @@ return {
 	},
 
 	config = function(_, opts)
-		require("mini.icons").setup()
-		MiniIcons.mock_nvim_web_devicons()
-
 		opts.nesting_rules = require("neotree-file-nesting-config").nesting_rules
 		require("neo-tree").setup(opts)
 	end,

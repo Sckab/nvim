@@ -79,4 +79,11 @@ return {
 	DropBarIconUISeparator = { fg = "#2a2a2a" },
 	ToggleTerm1Normal = { bg = "#181616" },
 	ToggleTerm1EndOfBuffer = { bg = "#181616" },
+	RainbowDelimiterRed = { fg = "#E06C75" },
+	RainbowDelimiterYellow = { fg = "#E5C07B" },
+	RainbowDelimiterBlue = { fg = "#61AFEF" },
+	RainbowDelimiterOrange = { fg = "#D19A66" },
+	RainbowDelimiterGreen = { fg = "#98C379" },
+	RainbowDelimiterViolet = { fg = "#C678DD" },
+	RainbowDelimiterCyan = { fg = "#56B6C2" },
 }

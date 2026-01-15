@@ -2,9 +2,13 @@ return {
 	"neovim/nvim-lspconfig",
 	config = function()
 		vim.diagnostic.config({
-			virtual_text = true,
+			virtual_text = {
+				enable = true,
+				source = "always",
+			},
 
 			signs = {
+				enable = true,
 				text = {
 					[vim.diagnostic.severity.ERROR] = "",
 					[vim.diagnostic.severity.WARN] = "",
@@ -23,5 +27,9 @@ return {
 				border = "rounded",
 			},
 		})
+
+		vim.keymap.set("n", "<leader>df", function()
+			vim.diagnostic.open_float()
+		end, { desc = "Open diagnostic float" })
 	end,
 }
