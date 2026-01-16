@@ -1,18 +1,7 @@
 return {
 	{
-		"L3MON4D3/LuaSnip",
-		dependencies = { "rafamadriz/friendly-snippets" },
-		config = function()
-			require("luasnip.loaders.from_vscode").lazy_load()
-		end,
-	},
-	{
-		"rafamadriz/friendly-snippets",
-		lazy = true,
-	},
-	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets", "L3MON4D3/LuaSnip", version = "v2.*" },
+		dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
 
 		version = "1.*",
 
@@ -36,12 +25,16 @@ return {
 				completion = { menu = { auto_show = true } },
 			},
 
+			term = {
+				enabled = true,
+				menu = { auto_show = true },
+			},
+
 			completion = {
 				menu = {
 					draw = {
 						columns = {
 							{ "kind_icon", "label" },
-							{ "kind" },
 						},
 					},
 				},
@@ -69,10 +62,10 @@ return {
 						enabled = true,
 					},
 				},
-			},
 
-			sources = {
-				default = { "lsp", "path", "snippets", "buffer" },
+				ghost_text = {
+					enabled = true,
+				},
 			},
 
 			fuzzy = { implementation = "prefer_rust_with_warning" },
