@@ -24,6 +24,9 @@ vim.api.nvim_create_autocmd("FileType", {
 		"htmlangular",
 		"gitignore",
 		"jsonc",
+		"c",
+		"s",
+		"asm",
 	},
 
 	callback = function()

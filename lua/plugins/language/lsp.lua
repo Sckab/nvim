@@ -16,6 +16,8 @@ return {
 					"shfmt",
 					"stylua",
 					"taplo",
+					"prettierd",
+					"asmfmt",
 				},
 			})
 			require("mason-lspconfig").setup({
@@ -40,6 +42,8 @@ return {
 					"angularls",
 					"gh_actions_ls",
 					"gitlab_ci_ls",
+					"emmet_language_server",
+					"asm_lsp",
 				},
 			})
 
@@ -58,6 +62,7 @@ return {
 				"clangd",
 				"cmake",
 				"html",
+				"asm_lsp",
 			}
 
 			vim.lsp.config("lua_ls", {

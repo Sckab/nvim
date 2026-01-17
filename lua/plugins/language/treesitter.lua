@@ -33,9 +33,12 @@ return {
 				"gowork",
 				"regex",
 				"cpp",
+				"c",
 				"cmake",
 				"tsx",
 				"angular",
+				"asm",
+				"nasm",
 			})
 		end,
 	},
