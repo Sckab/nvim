@@ -90,7 +90,6 @@ return {
 			end
 
 			vim.lsp.enable("biome")
-			vim.lsp.enable("html")
 		end,
 	},
 }
