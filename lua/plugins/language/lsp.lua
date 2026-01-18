@@ -18,6 +18,7 @@ return {
 					"taplo",
 					"prettierd",
 					"asmfmt",
+					"mbake",
 				},
 			})
 			require("mason-lspconfig").setup({

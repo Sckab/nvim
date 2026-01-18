@@ -39,6 +39,7 @@ return {
 				"angular",
 				"asm",
 				"nasm",
+				"make",
 			})
 		end,
 	},

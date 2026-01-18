@@ -9,6 +9,15 @@ return {
 				timeout_ms = 500,
 				lsp_format = "fallback",
 			},
+
+            formatters = {
+                mbake = {
+                    command = "mbake",
+                    args = { "format", "$FILENAME" },
+                    stdin = false,
+                },
+            },
+
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "black" },
@@ -25,20 +34,26 @@ return {
 				javascriptreact = { "biome", "prettierd" },
 				typescriptreact = { "biome", "prettierd" },
 				json = { "biome", "prettierd" },
+				make = { "mbake" },
 			},
+
 			formatter_bin_paths = { vim.fn.stdpath("data") .. "/mason/bin" },
+
 			formatters_opts = {
 				stylua = {
 					column_width = 80,
 					indent_width = 4,
 					break_table_items = true,
 				},
+
 				black = {
 					line_length = 80,
 				},
+
 				shfmt = {
 					indent = 4,
 				},
+
 				csharpier = {
 					max_line_length = 80,
 					indent_size = 4,
