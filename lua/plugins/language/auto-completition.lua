@@ -1,7 +1,18 @@
 return {
 	{
+		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
+		config = function()
+			require("luasnip.loaders.from_vscode").lazy_load()
+		end,
+	},
+	{
+		"rafamadriz/friendly-snippets",
+		lazy = true,
+	},
+	{
 		"saghen/blink.cmp",
-		dependencies = { "L3MON4D3/LuaSnip", version = "v2.*" },
+		dependencies = { "rafamadriz/friendly-snippets", "L3MON4D3/LuaSnip", version = "v2.*" },
 
 		version = "1.*",
 
