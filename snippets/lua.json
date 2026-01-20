@@ -1,7 +1,6 @@
 {
-  "bc-lua": {
+  "comment": {
     "prefix": "bclua",
     "body": ["----------", "-- ${1:comment}", "----------"]
   }
 }
-
