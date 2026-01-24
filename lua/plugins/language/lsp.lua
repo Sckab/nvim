@@ -89,8 +89,6 @@ return {
 					end,
 				})
 			end
-
-			vim.lsp.enable("biome")
 		end,
 	},
 }

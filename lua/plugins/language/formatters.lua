@@ -10,30 +10,30 @@ return {
 				lsp_format = "fallback",
 			},
 
-            formatters = {
-                mbake = {
-                    command = "mbake",
-                    args = { "format", "$FILENAME" },
-                    stdin = false,
-                },
-            },
+			formatters = {
+				mbake = {
+					command = "mbake",
+					args = { "format", "$FILENAME" },
+					stdin = false,
+				},
+			},
 
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "black" },
-				javascript = { "biome", "prettierd" },
-				typescript = { "biome", "prettierd" },
-				css = { "biome", "prettierd" },
-				html = { "biome", "prettierd" },
-				astro = { "biome", "prettierd" },
+				javascript = { "biome" },
+				typescript = { "biome" },
+				css = { "biome" },
+				html = { "biome" },
+				astro = { "biome" },
 				bash = { "shfmt" },
 				csharp = { "csharpier" },
 				go = { "goimports" },
 				cpp = { "clang-format" },
 				c = { "clang-format" },
-				javascriptreact = { "biome", "prettierd" },
-				typescriptreact = { "biome", "prettierd" },
-				json = { "biome", "prettierd" },
+				javascriptreact = { "biome" },
+				typescriptreact = { "biome" },
+				json = { "biome" },
 				make = { "mbake" },
 			},
 
