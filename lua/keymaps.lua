@@ -57,3 +57,5 @@ vim.keymap.set({ "n", "v" }, "<leader>h", "<cmd>Treewalker Left<cr>", { silent =
 vim.keymap.set({ "n", "v" }, "<leader>l", "<cmd>Treewalker Right<cr>", { silent = true })
 
 vim.keymap.set("n", "<leader>M", require("treesj").toggle)
+
+vim.keymap.set("n", "<leader>mp", "<Cmd>RenderMarkdown toggle<CR>")

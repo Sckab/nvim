@@ -106,3 +106,10 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "FileType" }, {
 		vim.cmd("HighlightColors on")
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "codecompanion",
+	callback = function()
+		vim.cmd("RenderMarkdown")
+	end,
+})
