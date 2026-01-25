@@ -110,6 +110,8 @@ vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "FileType" }, {
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "codecompanion",
 	callback = function()
+		vim.wo.number = false
+		vim.wo.relativenumber = false
 		vim.cmd("RenderMarkdown")
 	end,
 })

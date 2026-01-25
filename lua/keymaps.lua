@@ -59,3 +59,5 @@ vim.keymap.set({ "n", "v" }, "<leader>l", "<cmd>Treewalker Right<cr>", { silent 
 vim.keymap.set("n", "<leader>M", require("treesj").toggle)
 
 vim.keymap.set("n", "<leader>mp", "<Cmd>RenderMarkdown toggle<CR>")
+
+vim.keymap.set("n", "<leader>ccc", "<Cmd>CodeCompanionChat<CR>")

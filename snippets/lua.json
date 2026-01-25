@@ -1,1 +1,1 @@
-{"cblua":{"body":["-----------------------","-- ${1:comment}","-----------------------"],"prefix":"cblua"},"comment":{"body":["----------","-- ${1:comment}","----------"],"prefix":"bclua"}}
+{"comment":{"prefix":"bclua","body":["----------","-- ${1:comment}","----------"]},"cblua":{"prefix":"cblua","body":["-----------------------","-- ${1:comment}","-----------------------"]},"keymap":{"body":"vim.keymap.set(\"${1:mode}\", \"${2:keymap}\", \"${3:action}\")","prefix":"keymap"}}

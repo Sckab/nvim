@@ -8,7 +8,7 @@ return {
 			relculnr = true,
 			relculright = false,
 			bt_ignore = { "neo-tree", "aerial", "trouble", "help", "terminal" },
-			ft_ignore = { "neo-tree", "aerial", "trouble", "help", "dashboard", "toggleterm" },
+			ft_ignore = { "neo-tree", "aerial", "trouble", "help", "dashboard", "toggleterm", "codecompanion" },
 			segments = {
 				{
 					sign = { namespace = { "diagnostic/signs", "gitsigns" }, maxwidth = 2, colwidth = 2, auto = true },
