@@ -40,6 +40,7 @@ return {
 				"asm",
 				"nasm",
 				"make",
+				"zig",
 			})
 		end,
 	},

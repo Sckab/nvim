@@ -45,6 +45,7 @@ return {
 					"gitlab_ci_ls",
 					"emmet_language_server",
 					"asm_lsp",
+					"zls",
 				},
 			})
 
@@ -64,6 +65,7 @@ return {
 				"cmake",
 				"html",
 				"asm_lsp",
+				"zls",
 			}
 
 			vim.lsp.config("lua_ls", {

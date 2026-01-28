@@ -27,6 +27,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"c",
 		"s",
 		"asm",
+		"zig",
 	},
 
 	callback = function()
