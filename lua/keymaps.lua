@@ -61,3 +61,19 @@ vim.keymap.set("n", "<leader>M", require("treesj").toggle)
 vim.keymap.set("n", "<leader>mp", "<Cmd>RenderMarkdown toggle<CR>")
 
 vim.keymap.set("n", "<leader>ccc", "<Cmd>CodeCompanionChat<CR>")
+
+----------
+-- DIAL
+----------
+vim.keymap.set("n", "<C-a>", function()
+	require("dial.map").manipulate("increment", "normal")
+end, { desc = "Increment" })
+vim.keymap.set("n", "<C-x>", function()
+	require("dial.map").manipulate("decrement", "normal")
+end, { desc = "Decrement" })
+vim.keymap.set("v", "<C-a>", function()
+	require("dial.map").manipulate("increment", "visual")
+end, { desc = "Increment" })
+vim.keymap.set("v", "<C-x>", function()
+	require("dial.map").manipulate("decrement", "visual")
+end, { desc = "Decrement" })
