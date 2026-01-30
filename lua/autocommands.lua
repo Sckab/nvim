@@ -1,6 +1,6 @@
 local indent_group = vim.api.nvim_create_augroup("IndentByFiletype", { clear = true })
 local colors_group = vim.api.nvim_create_augroup("Colors", { clear = true })
-local general_editing_group = vim.api.nvim_create_autocmd("GeneralEditing", { clear = true })
+local general_editing_group = vim.api.nvim_create_augroup("GeneralEditing", { clear = true })
 
 local function set_indent(spaces, et)
 	vim.bo.expandtab = et

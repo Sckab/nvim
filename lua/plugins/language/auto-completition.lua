@@ -47,7 +47,7 @@ return {
 			},
 
 			sources = {
-				default = { "dictionary", "lsp", "path", "snippets", "buffer" },
+				default = { "lsp", "snippets", "path", "buffer", "dictionary" },
 
 				providers = {
 					dictionary = {
@@ -80,12 +80,8 @@ return {
 
 				list = {
 					selection = {
-						preselect = function(ctx)
-							return ctx.mode ~= "cmdline" and not require("blink.cmp").snippet_active({ direction = 1 })
-						end,
-						auto_insert = function(ctx)
-							return ctx.mode == "cmdline"
-						end,
+						preselect = true,
+						auto_insert = true,
 					},
 				},
 
@@ -104,7 +100,28 @@ return {
 				},
 			},
 
-			fuzzy = { implementation = "prefer_rust_with_warning" },
+			fuzzy = {
+				implementation = "prefer_rust_with_warning",
+				sorts = {
+					function(a, b)
+						local source_priority = {
+							lsp = 4,
+							snippets = 3,
+							path = 2,
+							buffer = 1,
+							dictionary = 0,
+						}
+
+						local a_priority = source_priority[a.source_id]
+						local b_priority = source_priority[b.source_id]
+						if a_priority ~= b_priority then
+							return a_priority > b_priority
+						end
+					end,
+					"score",
+					"sort_text",
+				},
+			},
 		},
 
 		config = function(_, opts)
@@ -112,6 +129,7 @@ return {
 			blink.setup(opts)
 
 			local capabilities = blink.get_lsp_capabilities()
+
 			vim.lsp.config("*", { capabilities = capabilities })
 		end,
 	},
