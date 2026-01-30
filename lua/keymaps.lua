@@ -62,6 +62,8 @@ vim.keymap.set("n", "<leader>mp", "<Cmd>RenderMarkdown toggle<CR>")
 
 vim.keymap.set("n", "<leader>ccc", "<Cmd>CodeCompanionChat<CR>")
 
+vim.keymap.set("n", "<leader>gdc", "<Cmd>DiffviewClose<CR>", { desc = "Close the diffview buffer" })
+
 ----------
 -- DIAL
 ----------

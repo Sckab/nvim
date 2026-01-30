@@ -69,7 +69,7 @@ return {
 				menu = {
 					draw = {
 						columns = {
-							{ "kind_icon", "label" },
+							{ "kind_icon", "label", "source_name" },
 						},
 					},
 				},
