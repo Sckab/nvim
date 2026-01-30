@@ -15,7 +15,11 @@ return {
 	},
 	{
 		"saghen/blink.cmp",
-		dependencies = { "rafamadriz/friendly-snippets", "L3MON4D3/LuaSnip", version = "v2.*" },
+		dependencies = {
+			"rafamadriz/friendly-snippets",
+			"L3MON4D3/LuaSnip",
+			{ "Kaiser-Yang/blink-cmp-dictionary", dependencies = { "nvim-lua/plenary.nvim" } },
+		},
 
 		version = "1.*",
 
@@ -25,8 +29,6 @@ return {
 		---@type blink.cmp.Config
 		opts = {
 			keymap = { preset = "super-tab" },
-
-			snippets = { preset = "luasnip" },
 
 			signature = { enabled = true },
 
@@ -42,6 +44,25 @@ return {
 			term = {
 				enabled = true,
 				menu = { auto_show = true },
+			},
+
+			sources = {
+				default = { "dictionary", "lsp", "path", "snippets", "buffer" },
+
+				providers = {
+					dictionary = {
+						module = "blink-cmp-dictionary",
+						name = "Dict",
+						min_keyword_length = 3,
+						opts = {
+							dictionary_directories = { vim.fn.expand("~/.config/nvim/dicts/") },
+						},
+					},
+
+					snippets = {
+						preset = "luasnip",
+					},
+				},
 			},
 
 			completion = {
@@ -67,6 +88,7 @@ return {
 						end,
 					},
 				},
+
 				trigger = {
 					prefetch_on_insert = true,
 				},
@@ -84,8 +106,6 @@ return {
 
 			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
-
-		opts_extend = { "sources.default" },
 
 		config = function(_, opts)
 			local blink = require("blink.cmp")
