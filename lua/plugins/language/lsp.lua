@@ -4,6 +4,8 @@ return {
 		dependencies = {
 			{ "williamboman/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
+			"mfussenegger/nvim-lint",
+			"rshkarin/mason-nvim-lint",
 		},
 		config = function()
 			local navic = require("nvim-navic")
@@ -21,6 +23,17 @@ return {
 					"mbake",
 				},
 			})
+
+			require("mason-nvim-lint").setup({
+				automatic_installation = false,
+				ensure_installed = { "markdownlint" },
+			})
+
+			require("lint").linters_by_ft = {
+				markdown = { "markdownlint" },
+				json = { "jsonlint" },
+			}
+
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",

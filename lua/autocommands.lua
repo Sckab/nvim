@@ -1,4 +1,6 @@
-local grp = vim.api.nvim_create_augroup("IndentByFiletype", { clear = true })
+local indent_group = vim.api.nvim_create_augroup("IndentByFiletype", { clear = true })
+local colors_group = vim.api.nvim_create_augroup("Colors", { clear = true })
+local general_editing_group = vim.api.nvim_create_autocmd("GeneralEditing", { clear = true })
 
 local function set_indent(spaces, et)
 	vim.bo.expandtab = et
@@ -8,7 +10,7 @@ local function set_indent(spaces, et)
 end
 
 vim.api.nvim_create_autocmd("FileType", {
-	group = grp,
+	group = indent_group,
 	pattern = {
 		"javascript",
 		"javascriptreact",
@@ -40,7 +42,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	group = grp,
+	group = indent_group,
 	pattern = "python",
 	callback = function()
 		set_indent(4, true)
@@ -49,7 +51,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	group = grp,
+	group = indent_group,
 	pattern = "make",
 	callback = function()
 		set_indent(4, false)
@@ -58,12 +60,14 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
+	group = general_editing_group,
 	callback = function()
 		vim.cmd([[%s/\s\+$//e]])
 	end,
 })
 
 vim.api.nvim_create_autocmd("BufWritePre", {
+	group = general_editing_group,
 	pattern = {
 		"*.astro",
 		"*.html",
@@ -96,12 +100,14 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
+	group = colors_group,
 	callback = function(args)
 		vim.lsp.document_color.enable(false, args.buf)
 	end,
 })
 
 vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "FileType" }, {
+	group = colors_group,
 	callback = function()
 		vim.cmd("HighlightColors on")
 	end,
@@ -113,5 +119,12 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.wo.number = false
 		vim.wo.relativenumber = false
 		vim.cmd("RenderMarkdown")
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "ModeChanged" }, {
+	group = general_editing_group,
+	callback = function()
+		require("lint").try_lint()
 	end,
 })
