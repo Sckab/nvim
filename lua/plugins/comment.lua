@@ -1,16 +1,8 @@
 return {
 	{
-		"echasnovski/mini.comment",
-		lazy = true,
-		keys = {
-			{ "gc", mode = { "n", "x" }, desc = "Comment toggle" },
-			{ "gcc", mode = "n", desc = "Comment toggle current line" },
-		},
-		config = function()
-			require("mini.comment").setup()
-		end,
+		"numToStr/Comment.nvim",
+		opts = {},
 	},
-
 	{
 		"folke/todo-comments.nvim",
 		lazy = true,
