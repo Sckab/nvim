@@ -25,16 +25,17 @@ return {
                 ]],
 				keys = {
 					{
-						icon = "󰱼",
+						icon = "󰱼 ",
 						key = "f",
 						desc = "Find File",
 						action = ":lua require('telescope.builtin').find_files({ hidden = true })",
 					},
-					{ icon = "󰝒", key = "n", desc = "New File", action = ":ene | startinsert" },
-					{ icon = "󰒲", key = "l", desc = "Lazy", action = ":Lazy" },
-					{ icon = "󱁤", key = "m", desc = "Mason", action = ":Mason" },
-					{ icon = "󰏘", key = "t", desc = "Theme Switcher", action = ":Themery" },
-					{ icon = "", key = "q", desc = "Quit", action = ":qa" },
+					{ icon = "󰝒 ", key = "n", desc = "New File", action = ":ene | startinsert" },
+					{ icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
+					{ icon = "󱁤 ", key = "m", desc = "Mason", action = ":Mason" },
+					{ icon = "󰏘 ", key = "t", desc = "Theme Switcher", action = ":Themery" },
+					{ icon = " ", key = "c", desc = "Config", action = ":cd ~/.config/nvim/ | Neotree toggle" },
+					{ icon = " ", key = "q", desc = "Quit", action = ":qa" },
 				},
 			},
 
