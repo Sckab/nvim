@@ -1,4 +1,5 @@
 return {
+	{ "dmmulroy/ts-error-translator.nvim" }, -- this plugin is lowkey useful
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = {
