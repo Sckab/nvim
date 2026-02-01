@@ -10,15 +10,13 @@ return {
 		end,
 	},
 	{
-		"rafamadriz/friendly-snippets",
-		lazy = true,
-	},
-	{
 		"saghen/blink.cmp",
 		dependencies = {
-			"rafamadriz/friendly-snippets",
 			"L3MON4D3/LuaSnip",
-			{ "Kaiser-Yang/blink-cmp-dictionary", dependencies = { "nvim-lua/plenary.nvim" } },
+			{
+				"Kaiser-Yang/blink-cmp-dictionary",
+				dependencies = { "nvim-lua/plenary.nvim" },
+			},
 		},
 
 		version = "1.*",
@@ -69,7 +67,8 @@ return {
 				menu = {
 					draw = {
 						columns = {
-							{ "kind_icon", "label", "source_name" },
+							{ "kind_icon", "label" },
+							{ "source_name" },
 						},
 					},
 				},
