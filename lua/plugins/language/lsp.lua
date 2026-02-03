@@ -60,6 +60,7 @@ return {
 					"emmet_language_server",
 					"asm_lsp",
 					"zls",
+					"mdx_analyzer",
 				},
 			})
 
@@ -80,6 +81,7 @@ return {
 				"html",
 				"asm_lsp",
 				"zls",
+				"mdx_analyzer",
 			}
 
 			vim.lsp.config("lua_ls", {
