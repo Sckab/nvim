@@ -64,6 +64,9 @@ vim.keymap.set("n", "<leader>ccc", "<Cmd>CodeCompanionChat<CR>")
 
 vim.keymap.set("n", "<leader>gdc", "<Cmd>DiffviewClose<CR>", { desc = "Close the diffview buffer" })
 
+vim.keymap.set("n", "<leader>lr", "<Cmd>Leet run<CR>", { desc = "Run the code in the leetcode plugin interface" })
+vim.keymap.set("n", "<leader>ls", "<Cmd>Leet submit<CR>", { desc = "Submit the code in the leetcode plugin interface" })
+
 ----------
 -- DIAL
 ----------
