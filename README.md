@@ -8,8 +8,8 @@ That's my nvim config, it's aimed to have an IDE-like experience
 
 ## Preview
 
-[editor](./.github/assets/editor.png)
-[editor](./.github/assets/dashboard.png)
+![editor](./.github/assets/editor.png)
+![editor](./.github/assets/dashboard.png)
 
 ## Supported languages
 
