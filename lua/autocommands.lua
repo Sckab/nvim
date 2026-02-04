@@ -1,6 +1,7 @@
 local indent_group = vim.api.nvim_create_augroup("IndentByFiletype", { clear = true })
 local colors_group = vim.api.nvim_create_augroup("Colors", { clear = true })
 local general_editing_group = vim.api.nvim_create_augroup("GeneralEditing", { clear = true })
+local number_group = vim.api.nvim_create_augroup("numbertoggle", {})
 
 local function set_indent(spaces, et)
 	vim.bo.expandtab = et
@@ -126,5 +127,28 @@ vim.api.nvim_create_autocmd({ "ModeChanged" }, {
 	group = general_editing_group,
 	callback = function()
 		require("lint").try_lint()
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "WinEnter" }, {
+	pattern = "*",
+	group = number_group,
+	callback = function()
+		if vim.o.nu and vim.api.nvim_get_mode().mode ~= "i" then
+			vim.opt.relativenumber = true
+		end
+	end,
+})
+
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "WinLeave" }, {
+	pattern = "*",
+	group = number_group,
+	callback = function()
+		if vim.o.nu then
+			vim.opt.relativenumber = false
+			if not vim.tbl_contains({ "@", "-" }, vim.v.event.cmdtype) then
+				vim.cmd("redraw")
+			end
+		end
 	end,
 })
