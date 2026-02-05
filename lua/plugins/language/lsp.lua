@@ -10,29 +10,29 @@ return {
 		},
 		config = function()
 			local navic = require("nvim-navic")
-			require("mason").setup({
-				ensure_installed = {
-					"black",
-					"clang-format",
-					"csharpier",
-					"goimports",
-					"shfmt",
-					"stylua",
-					"taplo",
-					"prettierd",
-					"asmfmt",
-					"mbake",
-				},
-			})
+			--[[
+                since the `ensure_installed` list doesn't work,
+                make sure to install these formatters:
+                   black
+                   clang-format
+                   csharpier
+                   goimports
+                   shfmt
+                   stylua
+                   taplo
+                   prettierd
+                   asmfmt
+            ]]
 
 			require("mason-nvim-lint").setup({
 				automatic_installation = false,
-				ensure_installed = { "markdownlint" },
+				ensure_installed = { "markdownlint", "jsonlint", "ruff" },
 			})
 
 			require("lint").linters_by_ft = {
 				markdown = { "markdownlint" },
 				json = { "jsonlint" },
+				python = { "ruff" },
 			}
 
 			require("mason-lspconfig").setup({

@@ -10,14 +10,6 @@ return {
 				lsp_format = "fallback",
 			},
 
-			formatters = {
-				mbake = {
-					command = "mbake",
-					args = { "format", "$FILENAME" },
-					stdin = false,
-				},
-			},
-
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "black" },
@@ -34,7 +26,6 @@ return {
 				javascriptreact = { "biome" },
 				typescriptreact = { "biome" },
 				json = { "biome" },
-				make = { "mbake" },
 			},
 
 			formatter_bin_paths = { vim.fn.stdpath("data") .. "/mason/bin" },
