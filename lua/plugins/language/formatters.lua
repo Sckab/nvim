@@ -26,6 +26,7 @@ return {
 				javascriptreact = { "biome" },
 				typescriptreact = { "biome" },
 				json = { "biome" },
+				cmake = { "gersemi" },
 			},
 
 			formatter_bin_paths = { vim.fn.stdpath("data") .. "/mason/bin" },

@@ -26,7 +26,7 @@ return {
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
-			keymap = { preset = "super-tab" },
+			keymap = { preset = "default" },
 
 			signature = { enabled = true },
 
@@ -42,6 +42,7 @@ return {
 			term = {
 				enabled = true,
 				menu = { auto_show = true },
+				ghost_text = { enabled = true },
 			},
 
 			sources = {

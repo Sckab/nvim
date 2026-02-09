@@ -22,17 +22,24 @@ return {
                    taplo
                    prettierd
                    asmfmt
+                   gersemi
             ]]
 
 			require("mason-nvim-lint").setup({
 				automatic_installation = false,
-				ensure_installed = { "markdownlint", "jsonlint", "ruff" },
+				ensure_installed = {
+					"markdownlint",
+					"jsonlint",
+					"ruff",
+					"cmakelint",
+				},
 			})
 
 			require("lint").linters_by_ft = {
 				markdown = { "markdownlint" },
 				json = { "jsonlint" },
 				python = { "ruff" },
+				cmake = { "cmakelint" },
 			}
 
 			require("mason-lspconfig").setup({
@@ -52,7 +59,6 @@ return {
 					"pyright",
 					"gopls",
 					"clangd",
-					"cmake",
 					"biome",
 					"angularls",
 					"gh_actions_ls",
@@ -61,6 +67,7 @@ return {
 					"asm_lsp",
 					"zls",
 					"mdx_analyzer",
+					"neocmake",
 				},
 			})
 
@@ -77,11 +84,11 @@ return {
 				"pyright",
 				"gopls",
 				"clangd",
-				"cmake",
 				"html",
 				"asm_lsp",
 				"zls",
 				"mdx_analyzer",
+				"neocmake",
 			}
 
 			vim.lsp.config("lua_ls", {
