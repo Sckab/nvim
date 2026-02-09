@@ -33,13 +33,13 @@ return {
 
 			formatters_opts = {
 				stylua = {
-					column_width = 80,
+					column_width = 100,
 					indent_width = 4,
 					break_table_items = true,
 				},
 
 				black = {
-					line_length = 80,
+					line_length = 100,
 				},
 
 				shfmt = {
@@ -47,7 +47,7 @@ return {
 				},
 
 				csharpier = {
-					max_line_length = 80,
+					max_line_length = 100,
 					indent_size = 4,
 				},
 			},
@@ -56,11 +56,6 @@ return {
 		local function format()
 			conform.format({ async = true, lsp_format = "fallback" })
 		end
-
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			callback = format,
-			desc = "Format before save",
-		})
 
 		vim.api.nvim_create_autocmd("TextChanged", {
 			callback = function()

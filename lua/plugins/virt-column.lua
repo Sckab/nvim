@@ -3,7 +3,7 @@ return {
 	event = { "BufReadPost", "BufNewFile" },
 	config = function()
 		require("virt-column").setup({
-			virtcolumn = "80",
+			virtcolumn = "100",
 			char = "│",
 			highlight = "VirtColumn",
 			enabled = true,
