@@ -3,6 +3,8 @@ vim.keymap.set("i", "<C-j>", "<Down>", { desc = "Move down in insert mode", nore
 vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move up in insert mode", noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move right in insert mode", noremap = true, silent = true })
 
+-- FIX this needs a fix
+
 vim.keymap.set(
 	"t",
 	"<C-h>",
@@ -67,9 +69,20 @@ vim.keymap.set("n", "<leader>gdc", "<Cmd>DiffviewClose<CR>", { desc = "Close the
 vim.keymap.set("n", "<leader>lr", "<Cmd>Leet run<CR>", { desc = "Run the code in the leetcode plugin interface" })
 vim.keymap.set("n", "<leader>ls", "<Cmd>Leet submit<CR>", { desc = "Submit the code in the leetcode plugin interface" })
 
-----------
--- DIAL
-----------
+-- ┌──────────┐
+-- │ GRUG FAR │
+-- └──────────┘
+vim.keymap.set("n", "<leader>gf", "<Cmd>GrugFar<CR>", { desc = "Opens grug far" })
+
+-- ┌─────────────┐
+-- │ COMMENT BOX │
+-- └─────────────┘
+vim.keymap.set({ "n", "v" }, "<leader>cb", "<Cmd>CBllbox2<CR>", { desc = "Creates a comment box" })
+vim.keymap.set({ "n", "v" }, "<leader>cl", "<Cmd>CBllline1<CR>", { desc = "Creates a comment line" })
+
+-- ┌──────┐
+-- │ DIAL │
+-- └──────┘
 vim.keymap.set("n", "<C-a>", function()
 	require("dial.map").manipulate("increment", "normal")
 end, { desc = "Increment" })
