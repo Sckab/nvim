@@ -80,6 +80,25 @@ vim.keymap.set("n", "<leader>gf", "<Cmd>GrugFar<CR>", { desc = "Opens grug far" 
 vim.keymap.set({ "n", "v" }, "<leader>cb", "<Cmd>CBllbox2<CR>", { desc = "Creates a comment box" })
 vim.keymap.set({ "n", "v" }, "<leader>cl", "<Cmd>CBllline1<CR>", { desc = "Creates a comment line" })
 
+-- ┌─────┐
+-- │ DAP │
+-- └─────┘
+vim.keymap.set("n", "<leader>du", function()
+	require("dapui").toggle()
+end, { desc = "Toggle the DAP UI" })
+vim.keymap.set("n", "<leader>db", function()
+	require("dap").toggle_breakpoint()
+end, { desc = "Toggle Breakpoint" })
+vim.keymap.set("n", "<leader>dc", function()
+	require("dap").continue()
+end, { desc = "Continue" })
+vim.keymap.set("n", "<leader>dsi", function()
+	require("dap").step_into()
+end, { desc = "Step Into" })
+vim.keymap.set("n", "<leader>dso", function()
+	require("dap").step_over()
+end, { desc = "Step Over" })
+
 -- ┌──────┐
 -- │ DIAL │
 -- └──────┘

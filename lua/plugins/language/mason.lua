@@ -7,6 +7,7 @@ return {
 			"neovim/nvim-lspconfig",
 			"mfussenegger/nvim-lint",
 			"rshkarin/mason-nvim-lint",
+			"jay-babu/mason-nvim-dap.nvim",
 		},
 		config = function()
 			local navic = require("nvim-navic")
@@ -24,6 +25,12 @@ return {
                    asmfmt
                    gersemi
             ]]
+
+			require("mason").setup()
+
+			require("mason-nvim-dap").setup({
+				ensure_installed = { "codelldb" },
+			})
 
 			require("mason-nvim-lint").setup({
 				automatic_installation = false,

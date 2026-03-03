@@ -15,6 +15,12 @@ return {
 				"terminal",
 				"NeogitStatus",
 				"DiffviewFiles",
+				"dapui_scopes",
+				"dapui_breakpoints",
+				"dapui_stacks",
+				"dapui_watches",
+				"dapui-repl",
+				"dapui_console",
 			},
 			ft_ignore = {
 				"neo-tree",
@@ -26,6 +32,12 @@ return {
 				"codecompanion",
 				"NeogitStatus",
 				"DiffviewFiles",
+				"dapui_scopes",
+				"dapui_breakpoints",
+				"dapui_stacks",
+				"dapui_watches",
+				"dapui-repl",
+				"dapui_console",
 			},
 			segments = {
 				{
@@ -39,6 +51,19 @@ return {
 						auto = false,
 					},
 					click = "v:lua.ScSa",
+				},
+				{
+					sign = {
+						name = { "DapBreakpoint", "DapStopped" },
+						colwidth = 2,
+						auto = true,
+					},
+					click = "v:lua.ScSa",
+				},
+				{
+					text = { builtin.lnumfunc, " " },
+					condition = { true, builtin.not_empty },
+					click = "v:lua.ScLa",
 				},
 				{
 					text = { builtin.foldfunc },

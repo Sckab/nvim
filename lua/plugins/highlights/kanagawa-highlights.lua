@@ -87,4 +87,6 @@ return {
 	RainbowDelimiterViolet = { fg = "#C678DD" },
 	RainbowDelimiterCyan = { fg = "#56B6C2" },
 	BlinkCmpSource = { bg = "#181616", fg = "#929DB3" },
+	DapBreakpoint = { fg = "#C34043" },
+	DapStopped = { fg = "#C34043" },
 }
