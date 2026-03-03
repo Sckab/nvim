@@ -7,8 +7,26 @@ return {
 			setopt = true,
 			relculnr = true,
 			relculright = false,
-			bt_ignore = { "neo-tree", "aerial", "trouble", "help", "terminal" },
-			ft_ignore = { "neo-tree", "aerial", "trouble", "help", "dashboard", "toggleterm", "codecompanion" },
+			bt_ignore = {
+				"neo-tree",
+				"aerial",
+				"trouble",
+				"help",
+				"terminal",
+				"NeogitStatus",
+				"DiffviewFiles",
+			},
+			ft_ignore = {
+				"neo-tree",
+				"aerial",
+				"trouble",
+				"help",
+				"dashboard",
+				"toggleterm",
+				"codecompanion",
+				"NeogitStatus",
+				"DiffviewFiles",
+			},
 			segments = {
 				{
 					sign = { namespace = { "gitsigns" }, colwidth = 2, auto = false },
