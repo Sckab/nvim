@@ -28,6 +28,14 @@ vim.opt.listchars = {
 	nbsp = " ",
 }
 
+vim.opt.fillchars = {
+	fold = " ",
+	foldopen = "",
+	foldclose = "",
+	foldsep = "│",
+	eob = " ",
+}
+
 vim.opt.wrap = false
 
 vim.opt.hlsearch = false

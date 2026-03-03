@@ -11,13 +11,16 @@ return {
 			ft_ignore = { "neo-tree", "aerial", "trouble", "help", "dashboard", "toggleterm", "codecompanion" },
 			segments = {
 				{
-					sign = { namespace = { "diagnostic/signs", "gitsigns" }, maxwidth = 2, colwidth = 2, auto = true },
+					sign = { namespace = { "gitsigns" }, colwidth = 2, auto = false },
 					click = "v:lua.ScSa",
 				},
 				{
-					text = { builtin.lnumfunc, " " },
-					condition = { true, builtin.not_empty },
-					click = "v:lua.ScLa",
+					sign = {
+						namespace = { "diagnostic" },
+						colwidth = 2,
+						auto = false,
+					},
+					click = "v:lua.ScSa",
 				},
 				{
 					text = { builtin.foldfunc },
@@ -32,13 +35,5 @@ return {
 				},
 			},
 		})
-
-		vim.opt.fillchars = {
-			fold = " ",
-			foldopen = "",
-			foldclose = "",
-			foldsep = "│",
-			eob = " ",
-		}
 	end,
 }
