@@ -69,20 +69,21 @@ vim.keymap.set("n", "<leader>gdc", "<Cmd>DiffviewClose<CR>", { desc = "Close the
 vim.keymap.set("n", "<leader>lr", "<Cmd>Leet run<CR>", { desc = "Run the code in the leetcode plugin interface" })
 vim.keymap.set("n", "<leader>ls", "<Cmd>Leet submit<CR>", { desc = "Submit the code in the leetcode plugin interface" })
 
--- ┌──────────┐
+-- ╭──────────╮
 -- │ GRUG FAR │
--- └──────────┘
+-- ╰──────────╯
 vim.keymap.set("n", "<leader>gf", "<Cmd>GrugFar<CR>", { desc = "Opens grug far" })
 
--- ┌─────────────┐
+-- ╭─────────────╮
 -- │ COMMENT BOX │
--- └─────────────┘
-vim.keymap.set({ "n", "v" }, "<leader>cb", "<Cmd>CBllbox2<CR>", { desc = "Creates a comment box" })
+-- ╰─────────────╯
+vim.keymap.set({ "n", "v" }, "<leader>cb", "<Cmd>CBllbox1<CR>", { desc = "Creates a comment box" })
 vim.keymap.set({ "n", "v" }, "<leader>cl", "<Cmd>CBllline1<CR>", { desc = "Creates a comment line" })
+vim.keymap.set({ "n", "v" }, "<leader>cq", "<Cmd>CBllbox12<CR>", { desc = "Creates a comment quote" })
 
--- ┌─────┐
+-- ╭─────╮
 -- │ DAP │
--- └─────┘
+-- ╰─────╯
 vim.keymap.set("n", "<leader>du", function()
 	require("dapui").toggle()
 end, { desc = "Toggle the DAP UI" })
@@ -99,9 +100,9 @@ vim.keymap.set("n", "<leader>dso", function()
 	require("dap").step_over()
 end, { desc = "Step Over" })
 
--- ┌──────┐
+-- ╭──────╮
 -- │ DIAL │
--- └──────┘
+-- ╰──────╯
 vim.keymap.set("n", "<C-a>", function()
 	require("dial.map").manipulate("increment", "normal")
 end, { desc = "Increment" })
