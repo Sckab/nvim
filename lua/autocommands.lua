@@ -1,5 +1,4 @@
 local indent_group = vim.api.nvim_create_augroup("IndentByFiletype", { clear = true })
-local colors_group = vim.api.nvim_create_augroup("Colors", { clear = true })
 local general_editing_group = vim.api.nvim_create_augroup("GeneralEditing", { clear = true })
 local number_group = vim.api.nvim_create_augroup("numbertoggle", {})
 
@@ -97,20 +96,6 @@ vim.api.nvim_create_autocmd("TermOpen", {
 		vim.opt_local.number = false
 		vim.opt_local.relativenumber = false
 		vim.opt_local.signcolumn = "no"
-	end,
-})
-
-vim.api.nvim_create_autocmd("LspAttach", {
-	group = colors_group,
-	callback = function(args)
-		vim.lsp.document_color.enable(false, args.buf)
-	end,
-})
-
-vim.api.nvim_create_autocmd({ "BufReadPost", "BufNewFile", "FileType" }, {
-	group = colors_group,
-	callback = function()
-		vim.cmd("HighlightColors on")
 	end,
 })
 

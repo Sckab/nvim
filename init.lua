@@ -29,6 +29,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"asm",
 		"zig",
 		"mdx",
+		"rust",
 	},
 
 	callback = function()

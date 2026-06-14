@@ -41,8 +41,6 @@ return {
 
 			term = {
 				enabled = true,
-				menu = { auto_show = true },
-				ghost_text = { enabled = true },
 			},
 
 			sources = {
@@ -56,10 +54,6 @@ return {
 						opts = {
 							dictionary_directories = { vim.fn.expand("~/.config/nvim/dicts/") },
 						},
-					},
-
-					snippets = {
-						preset = "luasnip",
 					},
 				},
 			},
@@ -105,9 +99,9 @@ return {
 				sorts = {
 					function(a, b)
 						local source_priority = {
-							lsp = 4,
-							snippets = 3,
-							path = 2,
+							path = 3,
+							lsp = 2,
+							snippets = 2,
 							buffer = 1,
 							dictionary = 0,
 						}

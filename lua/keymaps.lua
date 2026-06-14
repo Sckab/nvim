@@ -3,8 +3,6 @@ vim.keymap.set("i", "<C-j>", "<Down>", { desc = "Move down in insert mode", nore
 vim.keymap.set("i", "<C-k>", "<Up>", { desc = "Move up in insert mode", noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { desc = "Move right in insert mode", noremap = true, silent = true })
 
--- FIX this needs a fix
-
 vim.keymap.set(
 	"t",
 	"<C-h>",

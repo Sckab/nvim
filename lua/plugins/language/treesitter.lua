@@ -41,6 +41,7 @@ return {
 				"nasm",
 				"make",
 				"zig",
+				"rust",
 			})
 		end,
 	},

@@ -75,6 +75,7 @@ return {
 					"zls",
 					"mdx_analyzer",
 					"neocmake",
+					"rust_analyzer",
 				},
 			})
 
@@ -96,6 +97,7 @@ return {
 				"zls",
 				"mdx_analyzer",
 				"neocmake",
+				"rust_analyzer",
 			}
 
 			vim.lsp.config("lua_ls", {
@@ -121,6 +123,15 @@ return {
 					end,
 				})
 			end
+
+			-- setup qmlls, since it isn't present in the mason register
+			vim.lsp.enable("qmlls")
+
+			vim.lsp.config("qmlls", {
+				cmd = { "qmlls" },
+				filetypes = { "qml", "qmljs" },
+				root_markers = { ".git" },
+			})
 		end,
 	},
 }
