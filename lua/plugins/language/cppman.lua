@@ -9,6 +9,8 @@ return {
 		picker = {
 			provider = "snacks",
 		},
+
+		viewer = { border = "rounded" },
 	},
 	init = function()
 		vim.api.nvim_create_autocmd("FileType", {
