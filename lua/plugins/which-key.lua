@@ -1,6 +1,10 @@
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
+	dependencies = {
+		"kylechui/nvim-surround",
+		{ "gregorias/nvim-surround-wk", config = true },
+	},
 	config = function()
 		local wk = require("which-key")
 

@@ -27,10 +27,5 @@ return {
 			whitespace = { remove_blankline_trail = true },
 			exclude = { filetypes = { "help", "alpha", "dashboard", "neo-tree", "Trouble", "lazy" } },
 		},
-		config = function(_, opts)
-			local hooks = require("ibl.hooks")
-			require("ibl").setup(opts)
-			hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
-		end,
 	},
 }
