@@ -30,6 +30,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"zig",
 		"mdx",
 		"rust",
+		"hyprlang",
 	},
 
 	callback = function()

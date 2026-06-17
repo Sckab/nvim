@@ -89,4 +89,6 @@ return {
 	BlinkCmpSource = { bg = "#181616", fg = "#929DB3" },
 	DapBreakpoint = { fg = "#C34043" },
 	DapStopped = { fg = "#C34043" },
+	FloatTitle = { bg = "none" },
+	FloatFooter = { bg = "none" },
 }

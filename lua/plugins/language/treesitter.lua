@@ -42,6 +42,7 @@ return {
 				"make",
 				"zig",
 				"rust",
+				"hyprlang",
 			})
 		end,
 	},
