@@ -1,6 +1,9 @@
 return {
 	"stevearc/conform.nvim",
 	opts = {},
+	dependencies = {
+		{ "williamboman/mason.nvim", opts = {} },
+	},
 	config = function()
 		local conform = require("conform")
 
@@ -52,6 +55,36 @@ return {
 				},
 			},
 		})
+
+		local registry = require("mason-registry")
+
+		local formatters = {
+			"asmfmt",
+			"biome",
+			"black",
+			"clang-format",
+			"cmakelang",
+			"csharpier",
+			"goimports",
+			"markdownlint",
+			"prettier",
+			"prettierd",
+			"ruff",
+			"shfmt",
+			"stylua",
+			"taplo",
+		}
+
+		for _, formatter in ipairs(formatters) do
+			if registry.has_package(formatter) then
+				local pkg = registry.get_package(formatter)
+				if not pkg:is_installed() then
+					vim.notify("Installing: " .. formatter, vim.log.levels.INFO)
+
+					pkg:install()
+				end
+			end
+		end
 
 		local function format()
 			conform.format({ async = true, lsp_format = "fallback" })

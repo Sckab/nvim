@@ -11,20 +11,6 @@ return {
 		},
 		config = function()
 			local navic = require("nvim-navic")
-			--[[
-                since the `ensure_installed` list doesn't work,
-                make sure to install these formatters:
-                   black
-                   clang-format
-                   csharpier
-                   goimports
-                   shfmt
-                   stylua
-                   taplo
-                   prettierd
-                   asmfmt
-                   gersemi
-            ]]
 
 			require("mason").setup()
 
