@@ -1,13 +1,17 @@
 return {
-	{ "dmmulroy/ts-error-translator.nvim" }, -- this plugin is lowkey useful
 	{
 		"williamboman/mason-lspconfig.nvim",
 		dependencies = {
-			{ "williamboman/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
 			"mfussenegger/nvim-lint",
+			{ "williamboman/mason.nvim", opts = {} },
 			"rshkarin/mason-nvim-lint",
 			"jay-babu/mason-nvim-dap.nvim",
+			"dmmulroy/ts-error-translator.nvim", -- this plugin is lowkey useful
+			{
+				"MysticalDevil/inlay-hints.nvim",
+				event = "LspAttach",
+			},
 		},
 		config = function()
 			local navic = require("nvim-navic")
@@ -24,7 +28,6 @@ return {
 					"markdownlint",
 					"jsonlint",
 					"ruff",
-					"cmakelint",
 				},
 			})
 
@@ -32,7 +35,7 @@ return {
 				markdown = { "markdownlint" },
 				json = { "jsonlint" },
 				python = { "ruff" },
-				cmake = { "cmakelint" },
+				cmake = { "cmake_lint" },
 			}
 
 			require("mason-lspconfig").setup({
