@@ -8,10 +8,6 @@ return {
 			"rshkarin/mason-nvim-lint",
 			"jay-babu/mason-nvim-dap.nvim",
 			"dmmulroy/ts-error-translator.nvim", -- this plugin is lowkey useful
-			{
-				"MysticalDevil/inlay-hints.nvim",
-				event = "LspAttach",
-			},
 		},
 		config = function()
 			local navic = require("nvim-navic")
@@ -98,11 +94,15 @@ return {
 								"hl",
 							},
 						},
+						workspace = {
+							library = { "/usr/share/nvim/runtime/lua" },
+						},
 					},
 				},
 
 				on_attach = function(client, bufnr)
 					navic.attach(client, bufnr)
+					vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 				end,
 			})
 
@@ -110,6 +110,7 @@ return {
 				vim.lsp.config(lsp, {
 					on_attach = function(client, bufnr)
 						navic.attach(client, bufnr)
+						vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 					end,
 				})
 			end
