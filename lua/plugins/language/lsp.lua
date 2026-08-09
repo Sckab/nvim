@@ -8,6 +8,11 @@ return {
 			"rshkarin/mason-nvim-lint",
 			"jay-babu/mason-nvim-dap.nvim",
 			"dmmulroy/ts-error-translator.nvim", -- this plugin is lowkey useful
+			{
+				"MysticalDevil/inlay-hints.nvim",
+				event = "LspAttach",
+				opts = {},
+			},
 		},
 		config = function()
 			local navic = require("nvim-navic")
@@ -52,7 +57,6 @@ return {
 					"gopls",
 					"clangd",
 					"biome",
-					"angularls",
 					"gh_actions_ls",
 					"gitlab_ci_ls",
 					"emmet_language_server",
@@ -61,13 +65,13 @@ return {
 					"mdx_analyzer",
 					"neocmake",
 					"rust_analyzer",
+					"vue_ls",
 				},
 			})
 
 			local lsps = {
 				"astro",
 				"cssls",
-				"ts_ls",
 				"csharp_ls",
 				"bashls",
 				"taplo",
@@ -83,6 +87,7 @@ return {
 				"mdx_analyzer",
 				"neocmake",
 				"rust_analyzer",
+				"vue_ls",
 			}
 
 			vim.lsp.config("lua_ls", {
@@ -102,15 +107,35 @@ return {
 
 				on_attach = function(client, bufnr)
 					navic.attach(client, bufnr)
-					vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 				end,
+			})
+
+			vim.lsp.config("ts_ls", {
+				filetypes = {
+					"typescript",
+					"javascript",
+					"javascriptreact",
+					"typescriptreact",
+					"vue",
+				},
+
+				init_options = {
+					plugins = {
+						{
+							name = "@vue/typescript-plugin",
+							location = vim.fn.stdpath("data")
+								.. "/mason/packages/vue-language-server/node_modules/@vue/language-server",
+							languages = { "vue" },
+							configNamespace = "typescript",
+						},
+					},
+				},
 			})
 
 			for _, lsp in ipairs(lsps) do
 				vim.lsp.config(lsp, {
 					on_attach = function(client, bufnr)
 						navic.attach(client, bufnr)
-						vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 					end,
 				})
 			end

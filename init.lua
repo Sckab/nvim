@@ -21,7 +21,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		"go",
 		"cpp",
 		"cmake",
-		"htmlangular",
 		"gitignore",
 		"jsonc",
 		"c",
@@ -31,6 +30,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"mdx",
 		"rust",
 		"hyprlang",
+		"vue",
 	},
 
 	callback = function()

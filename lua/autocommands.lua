@@ -138,15 +138,3 @@ vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "WinLeave" }, {
 		end
 	end,
 })
-
-vim.api.nvim_create_autocmd("LspAttach", {
-	group = lsp_group,
-	callback = function(args)
-		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		if client then
-			vim.lsp.semantic_tokens.enable(false)
-
-			client.server_capabilities.semanticTokensProvider = nil
-		end
-	end,
-})

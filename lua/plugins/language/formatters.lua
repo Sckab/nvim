@@ -30,6 +30,7 @@ return {
 				typescriptreact = { "biome" },
 				json = { "biome" },
 				cmake = { "cmake_format" },
+				vue = { "prettierd" },
 			},
 
 			formatter_bin_paths = { vim.fn.stdpath("data") .. "/mason/bin" },
