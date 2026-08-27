@@ -51,7 +51,7 @@ return {
 	NoiceCmdlinePrompt = { bg = "#181616", fg = "#7e9cd8" },
 	MsgArea = { bg = "#181616", fg = "#dcd7ba" },
 	MsgSeparator = { bg = "#181616", fg = "#626978" },
-	NormalFloat = { bg = "#181616", fg = "#dcd7ba" },
+	NormalFloat = { bg = "#181616", fg = "#626978" },
 	FloatBorder = { bg = "#181616", fg = "#626978" },
 	Pmenu = { bg = "#181616", fg = "#dcd7ba" },
 	PmenuSel = { bg = "#2d2a2e", fg = "#dcd7ba" },
@@ -65,6 +65,7 @@ return {
 	NeoTreeCursorLine = { bg = "#2a2a2a" },
 	NeoTreeTabInactive = { bg = "#181616", fg = "#2a2a2a" },
 	NeoTreeTabActive = { bg = "#181616", fg = "#76946A" },
+	NeoTreeFileName = { fg = "#dfdfd6" },
 	ColorColumn = { bg = "#2a2a2a" },
 	VirtColumn = { fg = "#2a2a2a" },
 	SnacksDashboardTitle = { fg = "#C34043", bold = true },
@@ -91,4 +92,5 @@ return {
 	DapStopped = { fg = "#C34043" },
 	FloatTitle = { bg = "none" },
 	FloatFooter = { bg = "none" },
+	NeogitFloatBorder = { fg = "#626978" },
 }

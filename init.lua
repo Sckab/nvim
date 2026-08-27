@@ -31,6 +31,8 @@ vim.api.nvim_create_autocmd("FileType", {
 		"rust",
 		"hyprlang",
 		"vue",
+		"qml",
+		"qmljs",
 	},
 
 	callback = function()

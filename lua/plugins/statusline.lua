@@ -26,7 +26,29 @@ return {
 			sections = {
 				lualine_a = { "mode" },
 				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "encoding" },
+				lualine_c = {
+					{
+						"encoding",
+						separator = { left = "", right = "" },
+					},
+					{
+						"%=",
+						separator = { left = "", right = "" },
+					},
+					{
+						function()
+							local stl = require("edgy-group.stl")
+							local left_line = stl.get_statusline("left")
+							local right_line = stl.get_statusline("right")
+							local bottom_line = stl.get_statusline("bottom")
+
+							return table.concat(left_line)
+								.. table.concat(right_line)
+								.. table.concat(bottom_line)
+						end,
+						separator = { left = "", right = "" },
+					},
+				},
 				lualine_x = {
 					{
 						"fileformat",

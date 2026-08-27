@@ -1,7 +1,6 @@
 local indent_group = vim.api.nvim_create_augroup("IndentByFiletype", { clear = true })
 local general_editing_group = vim.api.nvim_create_augroup("GeneralEditing", { clear = true })
 local number_group = vim.api.nvim_create_augroup("numbertoggle", {})
-local lsp_group = vim.api.nvim_create_augroup("LSP", {})
 
 local function set_indent(spaces, et)
 	vim.bo.expandtab = et

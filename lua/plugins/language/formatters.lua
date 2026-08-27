@@ -15,7 +15,7 @@ return {
 
 			formatters_by_ft = {
 				lua = { "stylua" },
-				python = { "black" },
+				python = { "black", "isort" },
 				javascript = { "biome" },
 				typescript = { "biome" },
 				css = { "biome" },
@@ -74,6 +74,7 @@ return {
 			"shfmt",
 			"stylua",
 			"taplo",
+			"isort",
 		}
 
 		for _, formatter in ipairs(formatters) do

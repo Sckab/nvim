@@ -66,6 +66,7 @@ return {
 					"neocmake",
 					"rust_analyzer",
 					"vue_ls",
+					"qmlls",
 				},
 			})
 
@@ -132,6 +133,19 @@ return {
 				},
 			})
 
+			local root_dir = vim.fs.root(0, { "pyproject.toml", ".venv", ".git" })
+
+			vim.lsp.config("qmlls", {
+				cmd = {
+					vim.fs.joinpath(root_dir, ".venv/lib/python3.12/site-packages/PySide6/qmlls"),
+					"-I",
+					vim.fs.joinpath(root_dir, ".venv/lib/python3.12/site-packages/PySide6/Qt/qml"),
+				},
+
+				filetypes = { "qml" },
+				root_markers = { ".git" },
+			})
+
 			for _, lsp in ipairs(lsps) do
 				vim.lsp.config(lsp, {
 					on_attach = function(client, bufnr)
@@ -139,15 +153,6 @@ return {
 					end,
 				})
 			end
-
-			-- setup qmlls, since it isn't present in the mason register
-			vim.lsp.enable("qmlls")
-
-			vim.lsp.config("qmlls", {
-				cmd = { "qmlls" },
-				filetypes = { "qml", "qmljs" },
-				root_markers = { ".git" },
-			})
 		end,
 	},
 }

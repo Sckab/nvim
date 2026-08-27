@@ -4,14 +4,17 @@ return {
 	event = "VeryLazy",
 	version = "*",
 	dependencies = {
-		"nvim-tree/nvim-web-devicons",
+		"nvim-mini/mini.icons",
 	},
 	config = function()
+		local mini_icons = require("mini.icons")
+		mini_icons.mock_nvim_web_devicons()
+
 		require("bufferline").setup({
 			options = {
 				mode = "buffers",
 				diagnostics = "nvim_lsp",
-				show_buffer_close_icons = true,
+				show_buffer_close_icons = false,
 				show_close_icon = false,
 				separator_style = "thin",
 				always_show_bufferline = false,
