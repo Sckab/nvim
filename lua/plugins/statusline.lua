@@ -2,6 +2,35 @@ local function clock()
 	return os.date("%H:%M")
 end
 
+local function formatters()
+	local conform = require("conform")
+	local formatters = conform.list_formatters_to_run(0)
+
+	if #formatters == 0 then
+		return ""
+	end
+
+	return "󰉿 "
+		.. table.concat(
+			vim.tbl_map(function(formatter)
+				return formatter.name
+			end, formatters),
+			" "
+		)
+end
+
+local function linters()
+	local lint = require("lint")
+	local ft = vim.bo.filetype
+	local names = lint.linters_by_ft[ft]
+
+	if not names or #names == 0 then
+		return ""
+	end
+
+	return "󰦕 " .. table.concat(names, ", ")
+end
+
 return {
 	"nvim-lualine/lualine.nvim",
 	lazy = true,
@@ -65,7 +94,7 @@ return {
 
 			winbar = {
 				lualine_a = { "filename" },
-				lualine_b = {},
+				lualine_b = { "filetype" },
 				lualine_c = {
 					{
 						"navic",
@@ -73,7 +102,7 @@ return {
 					},
 				},
 				lualine_x = {},
-				lualine_y = { "filetype" },
+				lualine_y = { formatters, linters },
 				lualine_z = { "lsp_status" },
 			},
 
@@ -87,11 +116,8 @@ return {
 			},
 
 			extensions = {
-				"neo-tree",
-				"aerial",
 				"lazy",
 				"mason",
-				"toggleterm",
 			},
 		})
 	end,

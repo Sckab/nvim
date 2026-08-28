@@ -29,6 +29,7 @@ return {
 					"markdownlint",
 					"jsonlint",
 					"ruff",
+					"sqlfluff",
 				},
 			})
 
@@ -37,6 +38,7 @@ return {
 				json = { "jsonlint" },
 				python = { "ruff" },
 				cmake = { "cmake_lint" },
+				sql = { "sqlfluff" },
 			}
 
 			require("mason-lspconfig").setup({
@@ -67,6 +69,7 @@ return {
 					"rust_analyzer",
 					"vue_ls",
 					"qmlls",
+					"sqls",
 				},
 			})
 

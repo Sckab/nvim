@@ -9,7 +9,7 @@ return {
 			relculright = false,
 			bt_ignore = {
 				"neo-tree",
-				"aerial",
+				"Outline",
 				"trouble",
 				"help",
 				"terminal",
@@ -24,7 +24,7 @@ return {
 			},
 			ft_ignore = {
 				"neo-tree",
-				"aerial",
+				"Outline",
 				"trouble",
 				"help",
 				"dashboard",

@@ -33,6 +33,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"vue",
 		"qml",
 		"qmljs",
+		"sql",
 	},
 
 	callback = function()

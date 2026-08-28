@@ -16,6 +16,7 @@ return {
 			groups = {
 				left = {
 					{ icon = "", titles = { "Neo-Tree" } },
+					{ icon = "", titles = { "DB" } },
 				},
 				right = {
 					{ icon = "", titles = { "Outline" } },
@@ -47,12 +48,21 @@ return {
 						winbar = "",
 					},
 				},
+				{
+					title = "DB",
+					size = { height = 20 },
+					ft = "dbee",
+					open = "Dbee toggle",
+					wo = {
+						winbar = "",
+					},
+				},
 			},
 			right = {
 				{
 					title = "Outline",
-					ft = "trouble",
-					open = "Trouble symbols toggle focus=false",
+					ft = "Outline",
+					open = "Outline",
 					wo = {
 						winbar = "",
 					},

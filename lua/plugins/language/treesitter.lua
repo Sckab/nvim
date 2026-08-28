@@ -43,6 +43,7 @@ return {
 				"rust",
 				"hyprlang",
 				"vue",
+				"sql",
 			})
 		end,
 	},

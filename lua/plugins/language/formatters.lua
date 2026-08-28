@@ -31,6 +31,7 @@ return {
 				json = { "biome" },
 				cmake = { "cmake_format" },
 				vue = { "prettierd" },
+				sql = { "sql_formatter" },
 			},
 
 			formatter_bin_paths = { vim.fn.stdpath("data") .. "/mason/bin" },
@@ -75,6 +76,7 @@ return {
 			"stylua",
 			"taplo",
 			"isort",
+			"sql-formatter",
 		}
 
 		for _, formatter in ipairs(formatters) do
