@@ -1,4 +1,5 @@
 return {
+	{ "SCSDC-co/gh-templates.nvim", dependencies = { "MunifTanjim/nui.nvim" }, opts = {} },
 	{
 		"lewis6991/gitsigns.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
