@@ -22,8 +22,6 @@ return {
 				html = { "biome" },
 				astro = { "biome" },
 				bash = { "shfmt" },
-				csharp = { "csharpier" },
-				go = { "goimports" },
 				cpp = { "clang-format" },
 				c = { "clang-format" },
 				javascriptreact = { "biome" },
@@ -50,24 +48,16 @@ return {
 				shfmt = {
 					indent = 4,
 				},
-
-				csharpier = {
-					max_line_length = 100,
-					indent_size = 4,
-				},
 			},
 		})
 
 		local registry = require("mason-registry")
 
 		local formatters = {
-			"asmfmt",
 			"biome",
 			"black",
 			"clang-format",
 			"cmakelang",
-			"csharpier",
-			"goimports",
 			"markdownlint",
 			"prettier",
 			"prettierd",

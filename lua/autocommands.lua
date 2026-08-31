@@ -108,7 +108,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "ModeChanged" }, {
+vim.api.nvim_create_autocmd("TextChanged", {
 	group = general_editing_group,
 	callback = function()
 		require("lint").try_lint()
