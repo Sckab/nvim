@@ -30,9 +30,19 @@ return {
 				cmake = { "cmake_format" },
 				vue = { "prettierd" },
 				sql = { "sql_formatter" },
+				toml = { "taplo" },
 			},
 
 			formatter_bin_paths = { vim.fn.stdpath("data") .. "/mason/bin" },
+
+			formatters = {
+				taplo = {
+					append_args = {
+						"--option",
+						"array_auto_collapse=false",
+					},
+				},
+			},
 
 			formatters_opts = {
 				stylua = {
